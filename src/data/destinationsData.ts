@@ -4,7 +4,7 @@ export const destinationsData = [
     name: "Lipton's Seat",
     distance: "17 KM",
     time: "1 hour",
-    image: "/images/destination-liptons.jpg",
+    image: "https://yangadventure.com/wp-content/uploads/2023/05/Liptons-Seat-header.jpg",
     size: "large",
   },
   {
@@ -12,7 +12,7 @@ export const destinationsData = [
     name: "Adisham Bungalow",
     distance: "5 KM",
     time: "15 min",
-    image: "/images/destination-adisham.jpg",
+    image: "https://www.stockvault.net/data/2020/09/09/278772/preview16.jpg",
     size: "small",
   },
   {
@@ -20,7 +20,7 @@ export const destinationsData = [
     name: "Horton Plains",
     distance: "33 KM",
     time: "1h 15min",
-    image: "/images/destination-horton.jpg",
+    image: "https://images.unsplash.com/photo-1610017810004-a6f3c531df34?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aG9ydG9uJTIwcGxhaW5zJTIwbmF0aW9uYWwlMjBwYXJrfGVufDB8fDB8fHww",
     size: "small",
   },
   {
@@ -28,7 +28,7 @@ export const destinationsData = [
     name: "Idalgashinna",
     distance: "10 KM",
     time: "30 min",
-    image: "/images/destination-idalgashinna.jpg",
+    image: "https://slrailwayforum.com/content/images/size/w2000/wordpress/2019/11/Idalgashinna-Railway-Station.jpg",
     size: "large",
   },
   {
@@ -36,7 +36,7 @@ export const destinationsData = [
     name: "Bambarakanda Falls",
     distance: "22 KM",
     time: "48 min",
-    image: "/images/destination-bambarakanda.jpg",
+    image: "https://t3.ftcdn.net/jpg/05/11/48/06/360_F_511480607_F1FGxJsgIBafRbnPkLaVn3Cb7slTvBCb.jpg",
     size: "large",
   },
   {
@@ -44,7 +44,7 @@ export const destinationsData = [
     name: "Gregory Lake",
     distance: "45 KM",
     time: "1h 25min",
-    image: "/images/destination-gregory.jpg",
+    image: "https://thumbs.dreamstime.com/b/gregory-lake-nuwara-eliya-sri-lanka-landscape-60682193.jpg",
     size: "small",
   },
 ];

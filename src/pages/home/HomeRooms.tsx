@@ -91,11 +91,15 @@ export default function HomeRooms() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
-                className="bg-white rounded-lg overflow-hidden h-[520px] flex flex-col group cursor-pointer"
+                className="glass-panel-light rounded-lg overflow-hidden h-[520px] flex flex-col group cursor-pointer"
               >
                 {/* IMAGE HALF */}
-                <div className="h-[65%] relative overflow-hidden image-placeholder" data-image-name={`[REPLACE: ${room.image.split('/').pop()}]`}>
-                  {/* The actual image would go here, scaled on hover */}
+                <div className="h-[65%] relative overflow-hidden">
+                  <img
+                    src={room.image}
+                    alt={room.name}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-500 z-10 flex items-center justify-center">
                     <span className="opacity-0 group-hover:opacity-100 font-label text-xs uppercase tracking-widest text-white border border-white px-6 py-2 transition-opacity duration-500 delay-100">
                       View Room

@@ -31,7 +31,7 @@ export default function HomeAbout() {
   return (
     <section 
       ref={sectionRef}
-      className="bg-white py-24 md:py-[120px] px-6 md:px-20 relative z-10"
+      className="glass-panel py-24 md:py-[120px] px-6 md:px-20 relative z-10 mx-4 md:mx-12 my-12 rounded-[40px]"
       style={{ clipPath: 'polygon(0 4%, 100% 0%, 100% 96%, 0% 100%)', marginTop: '-2vw' }}
     >
       <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_2fr_1fr] gap-12 lg:gap-8">
@@ -77,13 +77,15 @@ export default function HomeAbout() {
         {/* COLUMN 3 - IMAGE STACK */}
         <div ref={col3Ref} className="relative mt-12 lg:mt-0 pb-16 lg:pb-0 pl-8 lg:pl-0">
           
-          <div className="relative z-10 w-full aspect-[3/4] shadow-lg image-placeholder" data-image-name="[REPLACE: lords-lobby.jpg]">
+          <div className="relative z-10 w-full aspect-[3/4] shadow-lg overflow-hidden rounded-sm">
+            <img src="/images/img1.jpg" alt="Lord's Haputale lobby" className="w-full h-full object-cover" />
           </div>
 
-          <div className="absolute bottom-4 -left-8 w-[80%] aspect-video border-[4px] border-white z-20 shadow-xl image-placeholder" data-image-name="[REPLACE: lords-view.jpg]">
+          <div className="absolute bottom-4 -left-8 w-[80%] aspect-video border-[4px] border-white z-20 shadow-xl overflow-hidden">
+            <img src="/images/img2.jpg" alt="Lord's Haputale view" className="w-full h-full object-cover" />
           </div>
 
-          <div className="absolute -bottom-4 right-4 z-30 bg-white px-4 py-2 shadow-[0_4px_12px_rgba(0,0,0,0.1)]">
+          <div className="absolute -bottom-4 right-4 z-30 glass-panel-light px-4 py-2 shadow-xl border border-white/10 rounded-md">
             <span className="font-label text-[10px] text-[var(--lords-gold)] tracking-widest uppercase">
               EST. 2023
             </span>

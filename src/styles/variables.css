@@ -1,19 +1,26 @@
 :root {
-  /* Color Variables */
+  /* Color Variables - Dark Forest Theme */
   --lords-white: #FFFFFF;
-  --lords-mist: #F4F1EC;
-  --lords-fog: #E8E3DB;
-  --lords-stone: #D4CFC6;
+  
+  /* Backgrounds */
+  --lords-mist: #0C1410; /* Deepest forest shadow (Main BG) */
+  --lords-fog: #121F18;  /* Slightly lighter surface */
+  --lords-stone: #1A2B21; /* Borders and raised surfaces */
+  
+  /* Accents */
   --lords-bark: #8B7355;
-  --lords-moss: #4A5E3A;
-  --lords-forest: #2C3E20;
-  --lords-earth: #3D2B1F;
-  --lords-gold: #C4922A;
-  --lords-gold-light: #E8B84B;
-  --lords-cream: #F9F5EE;
-  --lords-charcoal: #1A1A1A;
-  --lords-smoke: #6B6560;
-  --lords-muted: #9A9590;
+  --lords-moss: #2A4032; /* Deep moss green */
+  --lords-forest: #1A291F;
+  --lords-earth: #111A13;
+  
+  --lords-gold: #D4AF37; /* Metallic gold */
+  --lords-gold-light: #F3E5AB;
+  
+  /* Text */
+  --lords-cream: #EAF0EC; /* Lightest text color */
+  --lords-charcoal: #F0F4F1; /* Main text (was dark, now light) */
+  --lords-smoke: #A3B8AA; /* Secondary text */
+  --lords-muted: #6B8775; /* Muted text */
 
   /* Font Families */
   --font-display: 'Bodoni Moda', serif;

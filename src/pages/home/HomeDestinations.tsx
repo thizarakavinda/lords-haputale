@@ -28,7 +28,7 @@ export default function HomeDestinations() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-white py-24 md:py-[120px] px-6 md:px-20">
+    <section ref={sectionRef} className="glass-panel py-24 md:py-[120px] px-6 md:px-20 mx-4 md:mx-12 my-12 rounded-[40px]">
       <div className="max-w-[1440px] mx-auto">
         
         {/* HEADER */}
@@ -75,10 +75,11 @@ export default function HomeDestinations() {
                 ref={el => { cardsRef.current[index] = el; }}
                 className={`${sizeClass} relative rounded-lg overflow-hidden group cursor-pointer`}
               >
-                {/* IMAGE PLACEHOLDER */}
-                <div 
-                  className="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-700 ease-in-out group-hover:scale-105 image-placeholder"
-                  data-image-name={`[REPLACE: ${dest.image.split('/').pop()}]`}
+                {/* IMAGE */}
+                <img
+                  src={dest.image}
+                  alt={dest.name}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
                 />
                 
                 {/* OVERLAY */}

@@ -15,14 +15,16 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full h-[72px] bg-[rgba(244,241,236,0.92)] backdrop-blur-[16px] z-50 border-b border-[var(--lords-stone)]/30">
+      <header className="fixed top-0 left-0 w-full h-[72px] glass-panel z-50 border-b border-[var(--lords-stone)]/30">
         <div className="max-w-[1440px] mx-auto h-full px-6 md:px-12 flex items-center justify-between">
           
           {/* LOGO */}
           <Link to="/" className="flex items-center gap-3 z-50">
-            <div className="w-8 h-8 bg-[var(--lords-moss)] flex items-center justify-center text-white font-serif text-lg leading-none">
-              L
-            </div>
+            <img
+              src="/images/lords-logo.png"
+              alt="Lord's Haputale Logo"
+              className="w-10 h-10 object-contain"
+            />
             <div className="flex flex-col">
               <span className="font-display text-sm tracking-[0.2em] leading-tight text-[var(--lords-charcoal)]">LORD'S</span>
               <span className="font-label text-[10px] tracking-widest text-[var(--lords-muted)]">HAPUTALE</span>

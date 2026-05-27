@@ -31,11 +31,9 @@ export default function HomeExperience() {
       {/* PARALLAX BACKGROUND */}
       <div 
         ref={bgRef}
-        className="absolute inset-0 w-full h-[120%] -top-[10%] bg-cover bg-no-repeat image-placeholder"
-        data-image-name="[REPLACE: lords-mountain-panorama.jpg]"
-      >
-        {/* Actual image would be applied via style={{backgroundImage: ...}} */}
-      </div>
+        className="absolute inset-0 w-full h-[120%] -top-[10%] bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/images/img3.jpg')" }}
+      />
 
       {/* OVERLAY */}
       <div 

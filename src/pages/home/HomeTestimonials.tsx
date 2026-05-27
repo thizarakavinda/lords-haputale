@@ -77,7 +77,7 @@ export default function HomeTestimonials() {
             <div 
               key={test.id}
               ref={el => { cardsRef.current[index] = el; }}
-              className={`bg-white p-8 rounded-lg shadow-[0_4px_24px_rgba(44,62,32,0.06)] border-t-[3px] border-[var(--lords-gold)] relative ${test.offset}`}
+              className={`glass-panel p-8 rounded-lg border-t-[3px] border-[var(--lords-gold)] relative ${test.offset}`}
             >
               <span className="absolute top-4 left-6 font-display text-[80px] text-[var(--lords-gold)] opacity-15 leading-none select-none">
                 "
