@@ -1,0 +1,79 @@
+@import 'tailwindcss';
+@import './variables.css';
+
+@layer base {
+  html {
+    scroll-behavior: initial; /* Lenis handles smooth scroll */
+  }
+  
+  body {
+    background-color: var(--lords-mist);
+    color: var(--lords-charcoal);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 400;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Image Placeholder Utility */
+  .image-placeholder {
+    background: linear-gradient(135deg, var(--lords-fog) 0%, var(--lords-stone) 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .image-placeholder::after {
+    content: attr(data-image-name);
+    font-family: var(--font-label);
+    font-size: 11px;
+    color: var(--lords-muted);
+    text-transform: uppercase;
+    position: absolute;
+    z-index: 10;
+  }
+}
+
+/* Lenis Recommended CSS */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+@theme {
+  --animate-marquee: marquee 20s linear infinite;
+  
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+}
+
