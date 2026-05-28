@@ -6,6 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Galaxy from './components/Galaxy';
 import Home from './pages/home';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -45,7 +46,17 @@ function App() {
   }, [location.pathname]);
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen relative">
+      {/* Fixed Galaxy background — visible through all glass panels */}
+      <Galaxy
+        density={0.9}
+        starSpeed={0.25}
+        glowIntensity={0.4}
+        hueShift={145}
+        saturation={18}
+        className="fixed inset-0 w-screen h-screen"
+        style={{ zIndex: -1 }}
+      />
       <Navbar />
       <main className="flex-grow">
         <Routes>

@@ -87,14 +87,14 @@ export default function HomeDestinations() {
 
                 {/* CONTENT */}
                 <div className="absolute bottom-6 left-6 z-10">
-                  <h3 className="font-serif text-[22px] text-white mb-3">
+                  <h3 className="font-display text-[22px] text-[var(--lords-cream)] mb-3 font-normal">
                     {dest.name}
                   </h3>
                   <div className="flex gap-2">
-                    <span className="bg-[rgba(196,146,42,0.9)] text-white font-label text-[10px] uppercase tracking-wider px-3 py-1">
+                    <span className="bg-[var(--lords-gold)] text-[var(--lords-mist)] font-label text-[10px] uppercase tracking-wider px-3 py-1 font-medium rounded-sm">
                       {dest.distance}
                     </span>
-                    <span className="bg-[rgba(26,26,26,0.6)] backdrop-blur-md text-white font-label text-[10px] uppercase tracking-wider px-3 py-1">
+                    <span className="bg-[var(--lords-stone)]/80 backdrop-blur-md text-[var(--lords-cream)] font-label text-[10px] uppercase tracking-wider px-3 py-1 rounded-sm">
                       {dest.time}
                     </span>
                   </div>

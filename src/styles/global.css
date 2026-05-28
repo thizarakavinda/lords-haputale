@@ -8,7 +8,7 @@
   }
 
   body {
-    background-color: var(--lords-mist);
+    background-color: rgb(5, 10, 7); /* Matches Galaxy canvas bg exactly */
     color: var(--lords-charcoal);
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
@@ -34,22 +34,19 @@
 
   /* Forest Glassmorphism Utilities */
   .glass-panel {
-    background: rgba(18, 31, 24, 0.45);
-    /* Forest dark tint */
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    background: rgba(5, 10, 7, 0.45);
+    border: 1px solid rgba(197, 168, 128, 0.15); /* Soft gold border */
+    box-shadow: 
+      0 20px 50px 0 rgba(0, 0, 0, 0.5),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
   }
 
   .glass-panel-light {
-    background: rgba(26, 43, 33, 0.6);
-    /* Slightly lighter forest tint */
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(212, 175, 55, 0.15);
-    /* Gold tinted border */
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    background: rgba(17, 32, 23, 0.5);
+    border: 1px solid rgba(197, 168, 128, 0.25); /* More prominent gold border */
+    box-shadow: 
+      0 12px 32px 0 rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
   }
 
   /* Image Placeholder Utility */
@@ -107,4 +104,15 @@ html.lenis body {
       transform: translateX(-50%);
     }
   }
+}
+
+/* Testimonial infinite scroll rows */
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scroll-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
 }

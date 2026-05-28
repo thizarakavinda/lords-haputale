@@ -15,19 +15,26 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full h-[72px] glass-panel z-50 border-b border-[var(--lords-stone)]/30">
-        <div className="max-w-[1440px] mx-auto h-full px-6 md:px-12 flex items-center justify-between">
+      <header 
+        className="fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] md:w-[calc(100%-4rem)] max-w-[1280px] h-[72px] z-50 rounded-full border border-[var(--lords-stone)]/50 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+        style={{
+          background: 'rgba(5, 10, 7, 0.75)',
+          backdropFilter: 'blur(16px)',
+          WebkitBackdropFilter: 'blur(16px)',
+        }}
+      >
+        <div className="w-full h-full px-8 md:px-12 flex items-center justify-between">
           
           {/* LOGO */}
-          <Link to="/" className="flex items-center gap-3 z-50">
+          <Link to="/" className="flex items-center gap-1 z-50">
             <img
               src="/images/lords-logo.png"
               alt="Lord's Haputale Logo"
-              className="w-10 h-10 object-contain"
+              className="w-13 h-13 object-contain"
             />
             <div className="flex flex-col">
               <span className="font-display text-sm tracking-[0.2em] leading-tight text-[var(--lords-charcoal)]">LORD'S</span>
-              <span className="font-label text-[10px] tracking-widest text-[var(--lords-muted)]">HAPUTALE</span>
+              <span className="font-label text-[9px] tracking-widest text-[var(--lords-muted)]">HAPUTALE</span>
             </div>
           </Link>
 
@@ -48,7 +55,7 @@ export default function Navbar() {
           <div className="flex items-center gap-4 z-50">
             <Link 
               to="/booking"
-              className="hidden md:flex items-center justify-center bg-[var(--lords-moss)] text-white font-label text-[11px] uppercase tracking-wider px-6 py-3 rounded-sm hover:bg-[var(--lords-forest)] transition-colors"
+              className="hidden md:flex items-center justify-center bg-[var(--lords-gold)] text-[var(--lords-mist)] font-label text-[11px] uppercase tracking-wider px-6 py-3 rounded-sm hover:bg-[var(--lords-gold-light)] font-medium transition-colors"
             >
               Book Now
             </Link>

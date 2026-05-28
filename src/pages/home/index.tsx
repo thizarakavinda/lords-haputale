@@ -9,7 +9,7 @@ import MarqueeStrip from '../../components/MarqueeStrip';
 
 export default function Home() {
   return (
-    <div className="bg-[var(--lords-mist)]">
+    <div>
       <HomeHero />
       <MarqueeStrip variant="green" />
       <HomeAbout />

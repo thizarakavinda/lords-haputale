@@ -9,18 +9,21 @@ export default function MarqueeStrip({
   text = "ELEGANCE ABOVE THE HILLS  ·  HAPUTALE SRI LANKA  ·  MISTY MOUNTAINS  ·  BOUTIQUE LUXURY  ·  BOOK YOUR ESCAPE  ·  "
 }: MarqueeStripProps) {
   
-  const bgClass = variant === 'green' ? 'bg-[var(--lords-moss)] text-white' : 'bg-[var(--lords-gold)] text-[var(--lords-charcoal)]';
+  const containerStyle = variant === 'green' 
+    ? "bg-gradient-to-r from-[var(--lords-fog)] via-[var(--lords-stone)] to-[var(--lords-fog)] border-y border-[var(--lords-gold)]/20 text-[var(--lords-gold)]" 
+    : "bg-gradient-to-r from-[var(--lords-gold)] to-[var(--lords-gold-light)] border-y border-white/10 text-[var(--lords-mist)]";
   
-  // Duplicate text several times to ensure smooth infinite scrolling
-  const repeatedText = Array(4).fill(text).join(' ');
+  // Custom premium text
+  const cleanText = text.replace(/·/g, "✦");
+  const repeatedText = Array(4).fill(cleanText).join(' ');
 
   return (
-    <div className={`w-full h-14 overflow-hidden flex items-center ${bgClass}`}>
+    <div className={`w-full h-14 overflow-hidden flex items-center shadow-lg relative z-20 ${containerStyle}`}>
       <div className="flex whitespace-nowrap animate-marquee">
-        <span className="font-label text-[13px] uppercase tracking-[0.3em] px-4">
+        <span className="font-label text-[11px] md:text-[12px] uppercase tracking-[0.35em] px-4 select-none">
           {repeatedText}
         </span>
-        <span className="font-label text-[13px] uppercase tracking-[0.3em] px-4">
+        <span className="font-label text-[11px] md:text-[12px] uppercase tracking-[0.35em] px-4 select-none">
           {repeatedText}
         </span>
       </div>

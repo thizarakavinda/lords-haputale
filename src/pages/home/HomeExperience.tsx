@@ -32,7 +32,7 @@ export default function HomeExperience() {
       <div 
         ref={bgRef}
         className="absolute inset-0 w-full h-[120%] -top-[10%] bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/img3.jpg')" }}
+        style={{ backgroundImage: "url('/images/clouds.jpg')" }}
       />
 
       {/* OVERLAY */}
@@ -66,11 +66,41 @@ export default function HomeExperience() {
         </div>
       </div>
 
-      {/* CONTENT RIGHT */}
-      <div className="absolute bottom-10 right-10 md:bottom-20 md:right-20 z-0 pointer-events-none select-none">
-        <span className="font-display text-[200px] md:text-[320px] leading-none text-white opacity-5">
-          1
-        </span>
+      {/* FLOATING HIGHLAND METRICS PANEL (Right Side) */}
+      <div className="absolute top-1/2 -translate-y-1/2 right-6 md:right-20 z-10 max-w-[340px] hidden md:block">
+        <div className="glass-panel-light p-8 rounded-2xl border border-[var(--lords-gold)]/25 flex flex-col gap-6 shadow-2xl">
+          <span className="font-label text-[10px] uppercase tracking-[0.3em] text-[var(--lords-gold)] block">
+            CLIMATE & ELEVATION
+          </span>
+          
+          <div className="flex flex-col gap-4">
+            <div className="flex justify-between items-center border-b border-[var(--lords-stone)]/50 pb-3">
+              <span className="font-body text-xs text-[var(--lords-smoke)]">Altitude</span>
+              <span className="font-display text-lg text-white font-light">1,430m</span>
+            </div>
+            
+            <div className="flex justify-between items-center border-b border-[var(--lords-stone)]/50 pb-3">
+              <span className="font-body text-xs text-[var(--lords-smoke)]">Avg Temp</span>
+              <span className="font-display text-lg text-white font-light">18°C – 22°C</span>
+            </div>
+
+            <div className="flex justify-between items-center border-b border-[var(--lords-stone)]/50 pb-3">
+              <span className="font-body text-xs text-[var(--lords-smoke)]">Microclimate</span>
+              <span className="font-display text-lg text-white font-light">Misty Highland</span>
+            </div>
+
+            <div className="flex justify-between items-center">
+              <span className="font-body text-xs text-[var(--lords-smoke)]">Vibe</span>
+              <span className="font-display text-lg text-[var(--lords-gold)] font-light italic">Pure Seclusion</span>
+            </div>
+          </div>
+
+          <div className="h-px bg-gradient-to-r from-transparent via-[var(--lords-gold)]/20 to-transparent my-1" />
+
+          <p className="font-body text-[11px] text-[var(--lords-smoke)] leading-relaxed italic text-center">
+            "Watch the clouds roll into your room from Sri Lanka's highest peak lines."
+          </p>
+        </div>
       </div>
 
     </section>

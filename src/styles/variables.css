@@ -3,24 +3,24 @@
   --lords-white: #FFFFFF;
   
   /* Backgrounds */
-  --lords-mist: #0C1410; /* Deepest forest shadow (Main BG) */
-  --lords-fog: #121F18;  /* Slightly lighter surface */
-  --lords-stone: #1A2B21; /* Borders and raised surfaces */
+  --lords-mist: #050a07;   /* Deepest, richest forest black-green (Main BG) */
+  --lords-fog: #09120d;    /* Rich, dark moss surface */
+  --lords-stone: #112017;  /* Borders and raised glass surfaces */
   
   /* Accents */
-  --lords-bark: #8B7355;
-  --lords-moss: #2A4032; /* Deep moss green */
-  --lords-forest: #1A291F;
-  --lords-earth: #111A13;
+  --lords-bark: #8b7355;   /* Warm wood bark */
+  --lords-moss: #1c3525;   /* Deep forest moss green */
+  --lords-forest: #0d1a12; /* Dark pine shadow */
+  --lords-earth: #060e0a;  /* Undergrowth shadow */
   
-  --lords-gold: #D4AF37; /* Metallic gold */
-  --lords-gold-light: #F3E5AB;
+  --lords-gold: #c5a880;   /* Muted, premium champagne gold (luxury accent) */
+  --lords-gold-light: #e6d5bf; /* Soft cream gold */
   
   /* Text */
-  --lords-cream: #EAF0EC; /* Lightest text color */
-  --lords-charcoal: #F0F4F1; /* Main text (was dark, now light) */
-  --lords-smoke: #A3B8AA; /* Secondary text */
-  --lords-muted: #6B8775; /* Muted text */
+  --lords-cream: #f4f7f5;    /* Crisp off-white/cream for high contrast titles */
+  --lords-charcoal: #e1e7e3; /* Main readable text */
+  --lords-smoke: #9ab0a2;    /* Elegant sage green-gray for secondary text */
+  --lords-muted: #5e7567;    /* Deep sage for secondary labels and borders */
 
   /* Font Families */
   --font-display: 'Bodoni Moda', serif;
