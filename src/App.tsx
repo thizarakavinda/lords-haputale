@@ -8,6 +8,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Galaxy from './components/Galaxy';
 import Home from './pages/home';
+import About from './pages/about';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -61,7 +62,7 @@ function App() {
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* Add other routes here later */}
+          <Route path="/about" element={<About />} />
         </Routes>
       </main>
       <Footer />

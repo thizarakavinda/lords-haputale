@@ -6,15 +6,17 @@ import { ArrowLeft, ArrowRight, Wifi, Tv, Bath, BedDouble } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 
+// @ts-ignore
 import 'swiper/css';
+// @ts-ignore
 import 'swiper/css/navigation';
 
 import { roomsData } from '../../data/roomsData';
 
 const amenityIcons: Record<string, React.ReactNode> = {
-  'WiFi':  <Wifi size={12} />,
-  'TV':    <Tv size={12} />,
-  'bath':  <Bath size={12} />,
+  'WiFi': <Wifi size={12} />,
+  'TV': <Tv size={12} />,
+  'bath': <Bath size={12} />,
   '1 bed': <BedDouble size={12} />,
 };
 
@@ -92,8 +94,8 @@ export default function HomeRooms() {
           spaceBetween={28}
           slidesPerView={1.1}
           breakpoints={{
-            640:  { slidesPerView: 1.4 },
-            768:  { slidesPerView: 2.1 },
+            640: { slidesPerView: 1.4 },
+            768: { slidesPerView: 2.1 },
             1024: { slidesPerView: 2.5 },
             1440: { slidesPerView: 3.1 },
           }}
@@ -183,7 +185,7 @@ export default function HomeRooms() {
                         {room.name}
                       </h3>
                     </div>
-                    
+
                     <p className="font-body text-[13px] text-[var(--lords-smoke)] leading-relaxed pl-3.5">
                       {room.description}
                     </p>

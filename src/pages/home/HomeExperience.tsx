@@ -9,7 +9,7 @@ export default function HomeExperience() {
     const ctx = gsap.context(() => {
       gsap.fromTo(bgRef.current,
         { backgroundPosition: "50% 0%" },
-        { 
+        {
           backgroundPosition: "50% 30%",
           ease: "none",
           scrollTrigger: {
@@ -27,16 +27,16 @@ export default function HomeExperience() {
 
   return (
     <section ref={sectionRef} className="relative w-full h-[80vh] min-h-[600px] overflow-hidden">
-      
+
       {/* PARALLAX BACKGROUND */}
-      <div 
+      <div
         ref={bgRef}
         className="absolute inset-0 w-full h-[120%] -top-[10%] bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: "url('/images/clouds.jpg')" }}
       />
 
       {/* OVERLAY */}
-      <div 
+      <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background: 'linear-gradient(to right, rgba(26,26,26,0.7) 0%, rgba(26,26,26,0) 60%)'
@@ -49,14 +49,14 @@ export default function HomeExperience() {
           <span className="block">A sacred journey</span>
           <span className="block">above the clouds.</span>
         </h2>
-        
+
         <p className="font-body text-[15px] text-white/75 mt-5">
           Where clouds dance with peaks and time stands still.
         </p>
 
         <div className="flex flex-wrap gap-3 mt-8">
           {['Misty Valleys', 'Golden Sunrise', 'Tea Gardens'].map((tag) => (
-            <span 
+            <span
               key={tag}
               className="bg-white/15 backdrop-blur-[8px] border border-white/30 text-white font-label text-[11px] uppercase tracking-wider px-4 py-2 rounded-full"
             >
@@ -72,13 +72,13 @@ export default function HomeExperience() {
           <span className="font-label text-[10px] uppercase tracking-[0.3em] text-[var(--lords-gold)] block">
             CLIMATE & ELEVATION
           </span>
-          
+
           <div className="flex flex-col gap-4">
             <div className="flex justify-between items-center border-b border-[var(--lords-stone)]/50 pb-3">
               <span className="font-body text-xs text-[var(--lords-smoke)]">Altitude</span>
               <span className="font-display text-lg text-white font-light">1,430m</span>
             </div>
-            
+
             <div className="flex justify-between items-center border-b border-[var(--lords-stone)]/50 pb-3">
               <span className="font-body text-xs text-[var(--lords-smoke)]">Avg Temp</span>
               <span className="font-display text-lg text-white font-light">18°C – 22°C</span>

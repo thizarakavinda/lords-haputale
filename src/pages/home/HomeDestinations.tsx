@@ -30,7 +30,7 @@ export default function HomeDestinations() {
   return (
     <section ref={sectionRef} className="glass-panel py-24 md:py-[120px] px-6 md:px-20 mx-4 md:mx-12 my-12 rounded-[40px]">
       <div className="max-w-[1440px] mx-auto">
-        
+
         {/* HEADER */}
         <div className="text-center mb-16">
           <span className="font-label text-[10px] uppercase tracking-[0.4em] text-[var(--lords-gold)] block mb-4">
@@ -47,18 +47,18 @@ export default function HomeDestinations() {
         {/* CSS GRID MOSAIC */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
           {destinationsData.map((dest, index) => {
-            
+
             // Determine sizing classes based on design specs
             let sizeClass = 'col-span-1 h-[320px]';
             if (index === 0 || index === 4) {
               sizeClass = 'md:col-span-2 h-[320px] md:h-[400px]';
             } else if (index === 3) {
-               // wait the spec said:
-               // Row 1: [Large] [Small] -> meaning 2 cols, 1 col (index 0, 1)
-               // Row 2: [Small] [Large] -> meaning 1 col, 2 cols (index 2, 3)
-               // Let's adjust to match
+              // wait the spec said:
+              // Row 1: [Large] [Small] -> meaning 2 cols, 1 col (index 0, 1)
+              // Row 2: [Small] [Large] -> meaning 1 col, 2 cols (index 2, 3)
+              // Let's adjust to match
             }
-            
+
             // Let's manually set classes based on the index to exactly match 
             // Row 1: Large (0), Small (1)
             // Row 2: Small (2), Large (3)
@@ -70,7 +70,7 @@ export default function HomeDestinations() {
             }
 
             return (
-              <div 
+              <div
                 key={dest.id}
                 ref={el => { cardsRef.current[index] = el; }}
                 className={`${sizeClass} relative rounded-lg overflow-hidden group cursor-pointer`}
@@ -81,7 +81,7 @@ export default function HomeDestinations() {
                   alt={dest.name}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
                 />
-                
+
                 {/* OVERLAY */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
 
