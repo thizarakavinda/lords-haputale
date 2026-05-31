@@ -142,17 +142,17 @@ export default function Rooms() {
         ref={heroSectionRef}
         className="relative h-screen min-h-[750px] flex flex-col justify-between overflow-hidden"
       >
-        {/* Loop Background Video */}
+        {/* Background Image (Converted from video to webp) */}
         <div className="absolute inset-0 z-0">
           <video 
-            autoPlay 
-            loop 
-            muted 
-            playsInline 
+            autoPlay
+            muted
+            loop
+            playsInline   
+            src="/videos/room back.webm" 
+            
             className="w-full h-full object-cover"
-          >
-            <source src="/videos/room back.webp" type="video/webm" />
-          </video>
+          />
           {/* Deep Overlay for Luxury Contrast */}
           <div className="absolute inset-0 bg-black/60" />
         </div>
@@ -294,9 +294,9 @@ export default function Rooms() {
           {/* Three Image Landscape Preview Strip */}
           <div className="grid grid-cols-3 gap-0 h-[120px] md:h-[180px] w-full overflow-hidden border-t border-[var(--lords-stone)]/30">
             {[
-              { img: '/images/triple room.jpg', name: 'Triple Room' },
-              { img: '/images/double room.jpg', name: 'Double Room' },
-              { img: '/images/small double room.jpg', name: 'Small Double' },
+              { img: '/images/rooms/tripple room.webp', name: 'Triple Room' },
+              { img: '/images/rooms/double room.webp', name: 'Double Room' },
+              { img: '/images/rooms/small double room.webp', name: 'Small Double' },
             ].map((room, idx) => (
               <a 
                 key={idx}
@@ -348,7 +348,7 @@ export default function Rooms() {
               <div className="w-full h-[120%] absolute -top-[10%] left-0 overflow-hidden transition-transform duration-700 ease-out group-hover:scale-103">
                 <img 
                   ref={el => { roomImageRefs.current[0] = el; }}
-                  src="/images/triple room.jpg" 
+                  src="/images/rooms/tripple room.webp" 
                   alt="Luxury Triple Room Suite" 
                   className="w-full h-full object-cover"
                 />
@@ -365,7 +365,7 @@ export default function Rooms() {
             <div className="absolute -bottom-6 -right-6 w-[160px] h-[200px] hidden sm:block rounded-xl overflow-hidden border border-[var(--lords-gold)]/25 shadow-2xl z-25 group">
               <div className="w-full h-full overflow-hidden transition-transform duration-700 ease-out group-hover:scale-105">
                 <img 
-                  src="/images/triple room.jpg" 
+                  src="/images/rooms/tripple room 2.webp" 
                   alt="Triple Room Closeup Detail" 
                   className="w-full h-full object-cover object-left filter brightness-90"
                 />
@@ -565,7 +565,7 @@ export default function Rooms() {
             <div className="w-full h-[120%] absolute -top-[10%] left-0 overflow-hidden transition-transform duration-700 ease-out group-hover:scale-102">
               <img 
                 ref={el => { roomImageRefs.current[1] = el; }}
-                src="/images/double room.jpg" 
+                src="/images/rooms/double room.webp" 
                 alt="Luxury Double Room Accommodation" 
                 className="w-full h-full object-cover"
               />
@@ -708,7 +708,7 @@ export default function Rooms() {
               <div className="w-full h-[120%] absolute -top-[10%] left-0 overflow-hidden transition-transform duration-700 ease-out group-hover:scale-103">
                 <img 
                   ref={el => { roomImageRefs.current[2] = el; }}
-                  src="/images/small double room.jpg" 
+                  src="/images/rooms/small double room.webp" 
                   alt="Boutique Small Double Room" 
                   className="w-full h-full object-cover"
                 />

@@ -32,7 +32,7 @@ export default function HomeExperience() {
       <div
         ref={bgRef}
         className="absolute inset-0 w-full h-[120%] -top-[10%] bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/clouds.jpg')" }}
+        style={{ backgroundImage: "url('/images/clouds.webp')" }}
       />
 
       {/* OVERLAY */}

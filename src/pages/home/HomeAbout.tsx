@@ -106,12 +106,12 @@ export default function HomeAbout() {
           
           {/* Main Large Image */}
           <div className="relative z-10 w-full aspect-[4/5] shadow-[0_20px_40px_rgba(0,0,0,0.6)] overflow-hidden rounded-2xl border border-[var(--lords-stone)]">
-            <img src="/images/img1.jpg" alt="Lord's Haputale lobby" className="w-full h-full object-cover" />
+            <img src="/images/hero.webp" alt="Lord's Haputale lobby" className="w-full h-full object-cover" />
           </div>
 
           {/* Overlapping Small Image */}
           <div className="absolute bottom-6 -left-6 md:-left-12 w-[70%] aspect-video border-4 border-[var(--lords-fog)] z-20 shadow-[0_15px_30px_rgba(0,0,0,0.7)] overflow-hidden rounded-lg">
-            <img src="/images/img2.jpg" alt="Lord's Haputale view" className="w-full h-full object-cover" />
+            <img src="/images/hero 2.webp" alt="Lord's Haputale view" className="w-full h-full object-cover" />
           </div>
 
           {/* Badge */}

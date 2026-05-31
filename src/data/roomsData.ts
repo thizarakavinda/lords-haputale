@@ -5,7 +5,7 @@ export const roomsData = [
     category: "BOUTIQUE ROOM",
     price: 125,
     description: "The perfect space for families or groups of friends.",
-    image: "/images/triple room.jpg",
+    image: "/images/rooms/tripple room.webp",
     amenities: ["1 bed", "bath", "TV", "WiFi"],
   },
   {
@@ -14,7 +14,7 @@ export const roomsData = [
     category: "BOUTIQUE ROOM",
     price: 105,
     description: "Elegant comfort with stunning mountain panoramas.",
-    image: "/images/double room.jpg",
+    image: "/images/rooms/double room.webp",
     amenities: ["1 bed", "bath", "TV", "WiFi"],
   },
   {
@@ -23,7 +23,7 @@ export const roomsData = [
     category: "BOUTIQUE ROOM",
     price: 95,
     description: "Cozy intimacy without compromising on quality.",
-    image: "/images/small double room.jpg",
+    image: "/images/rooms/small double room.webp",
     amenities: ["1 bed", "bath", "TV", "WiFi"],
   },
 ];

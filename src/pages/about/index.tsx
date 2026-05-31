@@ -199,9 +199,9 @@ export default function About() {
           >
             <img 
               ref={heroImageRef}
-              src="/images/about/lords-aerial-about.png" 
+              src="/images/about/hero.webp" 
               alt="Lord's Haputale aerial view through viewport" 
-              className="w-full h-[140%] object-cover absolute -top-[20%]"
+              className="w-full h-[100%] object-cover absolute -top-[10%]"
             />
             {/* Embedded dark inner vignette shadow */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/30 pointer-events-none" />
@@ -280,7 +280,7 @@ export default function About() {
           <div ref={storyCol3Ref} className="flex flex-col gap-8 px-2 lg:px-6">
             <div className="w-full aspect-[2/3] overflow-hidden rounded-md border border-[var(--lords-stone)]/40 shadow-xl">
               <img 
-                src="/images/about/lords-story-portrait.png" 
+                src="/images/about/lords-story-portrait.webp" 
                 alt="Boutique tea estate views" 
                 className="w-full h-full object-cover hover:scale-103 transition-transform duration-700"
               />
@@ -443,7 +443,7 @@ export default function About() {
             {/* Landscape Property Image */}
             <div className="w-full aspect-[16/9] overflow-hidden rounded-xl border border-[var(--lords-stone)]/40 shadow-2xl">
               <img 
-                src="/images/about/lords-property.png" 
+                src="/images/about/lords-property.webp" 
                 alt="Lord's Haputale modern architecture" 
                 className="w-full h-full object-cover hover:scale-102 transition-transform duration-700"
               />
@@ -453,19 +453,19 @@ export default function About() {
           {/* RIGHT COLUMN - Overlapping Mosaic */}
           <div className="lg:col-span-5 relative pl-4 lg:pl-12 pt-12 lg:pt-0">
             
+
             {/* Base Portrait Image */}
             <div className="relative z-10 w-[90%] aspect-[3/4] shadow-[0_25px_50px_rgba(0,0,0,0.6)] overflow-hidden rounded-xl border border-[var(--lords-stone)]">
               <img 
-                src="/images/about/lords-interior.png" 
+                src="/images/about/lords-amenity.webp" 
                 alt="Lord's Haputale luxury interior" 
                 className="w-full h-full object-cover" 
               />
             </div>
-
             {/* Overlapping Landscape Image */}
             <div className="absolute bottom-[-40px] left-[-10px] md:left-[-30px] w-[75%] aspect-[4/3] border-4 border-[var(--lords-fog)] z-20 shadow-[0_20px_40px_rgba(0,0,0,0.7)] overflow-hidden rounded-lg">
               <img 
-                src="/images/about/lords-amenity.png" 
+                src="/images/about/lords-interior.webp" 
                 alt="Ceylon tea amenity" 
                 className="w-full h-full object-cover" 
               />

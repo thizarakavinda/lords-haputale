@@ -39,18 +39,17 @@ export default function HomeHero() {
       ref={containerRef}
       className="relative w-full h-screen min-h-[700px] flex flex-col justify-center overflow-hidden pt-[72px]"
     >
-      {/* BACKGROUND VIDEO */}
+      {/* BACKGROUND IMAGE (CONVERTED FROM VIDEO TO WEBP) */}
       <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="w-full h-full object-cover"
-        >
-          <source src="/videos/back.webm" type="video/webm" />
-          
-        </video>
+        <video 
+            autoPlay
+            muted
+            loop
+            playsInline   
+            src="/videos/back.webm" 
+            
+            className="w-full h-full object-cover"
+          />
         {/* DARK OVERLAY FOR LUXURY VIBE */}
         <div className="absolute inset-0 bg-black/60" />
       </div>
