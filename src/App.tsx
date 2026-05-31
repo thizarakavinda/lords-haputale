@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import Galaxy from './components/Galaxy';
 import Home from './pages/home';
 import About from './pages/about';
+import Rooms from './pages/rooms';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -63,6 +64,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/rooms" element={<Rooms />} />
         </Routes>
       </main>
       <Footer />

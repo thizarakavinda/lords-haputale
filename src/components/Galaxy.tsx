@@ -113,16 +113,18 @@ export default function Galaxy({
         ctx.lineWidth = size * 0.5;
         ctx.stroke();
 
-        // Star dot with glow
+        // Star dot with faster manual glow (avoids expensive canvas shadowBlur)
+        if (glowIntensity > 0) {
+          ctx.beginPath();
+          ctx.arc(sx, sy, size * 2.5 * glowIntensity, 0, Math.PI * 2);
+          ctx.fillStyle = `hsla(${star.hue}, ${saturation + 25}%, 80%, ${alpha * 0.18})`;
+          ctx.fill();
+        }
+
         ctx.beginPath();
         ctx.arc(sx, sy, size, 0, Math.PI * 2);
-        if (glowIntensity > 0) {
-          ctx.shadowBlur = size * 9 * glowIntensity;
-          ctx.shadowColor = `hsla(${star.hue}, ${saturation + 25}%, 80%, ${alpha})`;
-        }
         ctx.fillStyle = `hsla(${star.hue}, ${saturation}%, ${l}%, ${alpha})`;
         ctx.fill();
-        ctx.shadowBlur = 0;
       }
 
       animFrameId = requestAnimationFrame(draw);
