@@ -49,7 +49,7 @@ export default function HomeHero() {
           className="w-full h-full object-cover"
         >
           <source src="/videos/back.webm" type="video/webm" />
-          <source src="/videos/back.mp4" type="video/mp4" />
+          
         </video>
         {/* DARK OVERLAY FOR LUXURY VIBE */}
         <div className="absolute inset-0 bg-black/60" />
