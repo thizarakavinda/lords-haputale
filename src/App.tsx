@@ -10,6 +10,7 @@ import Galaxy from './components/Galaxy';
 import Home from './pages/home';
 import About from './pages/about';
 import Rooms from './pages/rooms';
+import Contact from './pages/contact';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -65,6 +66,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/rooms" element={<Rooms />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
       <Footer />

@@ -8,7 +8,8 @@
   }
 
   body {
-    background-color: rgb(5, 10, 7); /* Matches Galaxy canvas bg exactly */
+    background-color: rgb(5, 10, 7);
+    /* Matches Galaxy canvas bg exactly */
     color: var(--lords-charcoal);
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
@@ -35,16 +36,18 @@
   /* Forest Glassmorphism Utilities */
   .glass-panel {
     background: rgba(5, 10, 7, 0.45);
-    border: 1px solid rgba(197, 168, 128, 0.15); /* Soft gold border */
-    box-shadow: 
+    border: 1px solid rgba(197, 168, 128, 0.15);
+    /* Soft gold border */
+    box-shadow:
       0 20px 50px 0 rgba(0, 0, 0, 0.5),
       inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
   }
 
   .glass-panel-light {
     background: rgba(17, 32, 23, 0.5);
-    border: 1px solid rgba(197, 168, 128, 0.25); /* More prominent gold border */
-    box-shadow: 
+    border: 1px solid rgba(197, 168, 128, 0.25);
+    /* More prominent gold border */
+    box-shadow:
       0 12px 32px 0 rgba(0, 0, 0, 0.4),
       inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
   }
@@ -113,11 +116,56 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 /* Testimonial infinite scroll rows */
 @keyframes scroll-left {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes scroll-right {
   0% { transform: translateX(-50%); }
   100% { transform: translateX(0); }
+}
+
+/* Custom Swiper Coverflow Pagination Bullets */
+.attractions-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 36px;
+}
+
+.attractions-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(197, 168, 128, 0.35);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.attractions-bullet:hover {
+  background-color: rgba(197, 168, 128, 0.6);
+}
+
+.attractions-bullet-active {
+  background-color: var(--lords-gold) !important;
+  transform: scale(1.25);
+}
+
+/* Force Slide dimensions to prevent stretching */
+.attractions-swiper .swiper-slide {
+  width: 200px !important;
+  height: 280px !important;
+}
+
+@media (min-width: 768px) {
+  .attractions-swiper .swiper-slide {
+    width: 240px !important;
+    height: 340px !important;
+  }
 }
