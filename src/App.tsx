@@ -11,6 +11,7 @@ import Home from './pages/home';
 import About from './pages/about';
 import Rooms from './pages/rooms';
 import Contact from './pages/contact';
+import Booking from './pages/booking';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -67,6 +68,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/rooms" element={<Rooms />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/booking" element={<Booking />} />
         </Routes>
       </main>
       <Footer />

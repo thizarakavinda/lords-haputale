@@ -8,7 +8,13 @@ import {
   BedDouble, 
   ArrowRight, 
   Calendar, 
-  Users 
+  Users,
+  Bath,
+  Tv,
+  Wifi,
+  Mountain,
+  Droplets,
+  Sparkles
 } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -492,21 +498,24 @@ export default function Rooms() {
                   </p>
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
                     {[
-                      { icon: '🛏', text: '1 King Bed' },
-                      { icon: '🚿', text: 'Private Bath' },
-                      { icon: '📺', text: 'Smart TV' },
-                      { icon: '📶', text: 'Free WiFi' },
-                      { icon: '🏔', text: 'Mountain View' },
-                      { icon: '❄️', text: 'Hot Water' },
-                    ].map((pill, idx) => (
-                      <span 
-                        key={idx}
-                        className="flex items-center gap-2 bg-[var(--lords-stone)]/40 text-[var(--lords-cream)] font-label text-[10px] uppercase tracking-wider px-3 py-2 rounded-sm border border-[var(--lords-gold)]/10"
-                      >
-                        <span>{pill.icon}</span>
-                        <span>{pill.text}</span>
-                      </span>
-                    ))}
+                      { icon: BedDouble, text: '1 King Bed' },
+                      { icon: Bath, text: 'Private Bath' },
+                      { icon: Tv, text: 'Smart TV' },
+                      { icon: Wifi, text: 'Free WiFi' },
+                      { icon: Mountain, text: 'Mountain View' },
+                      { icon: Droplets, text: 'Hot Water' },
+                    ].map((pill, idx) => {
+                      const IconComponent = pill.icon;
+                      return (
+                        <span 
+                          key={idx}
+                          className="flex items-center gap-2 bg-[var(--lords-stone)]/40 text-[var(--lords-cream)] font-label text-[10px] uppercase tracking-wider px-3 py-2 rounded-sm border border-[var(--lords-gold)]/10"
+                        >
+                          <IconComponent size={14} className="text-[var(--lords-gold)] shrink-0" />
+                          <span>{pill.text}</span>
+                        </span>
+                      );
+                    })}
                   </div>
                 </div>
               )}
@@ -763,21 +772,24 @@ export default function Rooms() {
             {/* Feature Pills */}
             <div className="flex flex-wrap gap-2.5 mb-10 max-w-[480px]">
               {[
-                { icon: '🛏', text: '1 Double Bed' },
-                { icon: '🚿', text: 'Private Bath' },
-                { icon: '📺', text: 'Smart TV' },
-                { icon: '📶', text: 'Free WiFi' },
-                { icon: '🏔', text: 'Hill View' },
-                { icon: '🧴', text: 'Amenities Kit' },
-              ].map((pill, idx) => (
-                <span 
-                  key={idx}
-                  className="flex items-center gap-1.5 bg-[var(--lords-stone)]/40 text-[var(--lords-cream)] font-label text-[10px] uppercase tracking-wider px-3.5 py-2 border border-[var(--lords-gold)]/10"
-                >
-                  <span>{pill.icon}</span>
-                  <span>{pill.text}</span>
-                </span>
-              ))}
+                { icon: BedDouble, text: '1 Double Bed' },
+                { icon: Bath, text: 'Private Bath' },
+                { icon: Tv, text: 'Smart TV' },
+                { icon: Wifi, text: 'Free WiFi' },
+                { icon: Mountain, text: 'Hill View' },
+                { icon: Sparkles, text: 'Amenities Kit' },
+              ].map((pill, idx) => {
+                const IconComponent = pill.icon;
+                return (
+                  <span 
+                    key={idx}
+                    className="flex items-center gap-1.5 bg-[var(--lords-stone)]/40 text-[var(--lords-cream)] font-label text-[10px] uppercase tracking-wider px-3.5 py-2 border border-[var(--lords-gold)]/10"
+                  >
+                    <IconComponent size={14} className="text-[var(--lords-gold)] shrink-0" />
+                    <span>{pill.text}</span>
+                  </span>
+                );
+              })}
             </div>
 
             {/* Price Section and CTAs stacked staggered */}
