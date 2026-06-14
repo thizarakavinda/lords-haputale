@@ -9,7 +9,7 @@
 
   body {
     background-color: rgb(5, 10, 7);
-    /* Matches Galaxy canvas bg exactly */
+    /* Locked to Galaxy canvas fill — do not change */
     color: var(--lords-charcoal);
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
@@ -33,20 +33,20 @@
     text-wrap: balance;
   }
 
-  /* Forest Glassmorphism Utilities */
+  /* Forest Green Glassmorphism Utilities */
   .glass-panel {
-    background: rgba(5, 10, 7, 0.45);
+    background: rgba(13, 26, 17, 0.52);
+    /* Forest-green tinted dark glass */
     border: 1px solid rgba(197, 168, 128, 0.15);
-    /* Soft gold border */
     box-shadow:
       0 20px 50px 0 rgba(0, 0, 0, 0.5),
       inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
   }
 
   .glass-panel-light {
-    background: rgba(17, 32, 23, 0.5);
+    background: rgba(26, 48, 35, 0.58);
+    /* Richer forest green for highlighted panels */
     border: 1px solid rgba(197, 168, 128, 0.25);
-    /* More prominent gold border */
     box-shadow:
       0 12px 32px 0 rgba(0, 0, 0, 0.4),
       inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
@@ -110,7 +110,8 @@ html.lenis body {
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
-  filter: invert(38%) sepia(19%) saturate(476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+  /* Recolours browser date icon to match --lords-moss (#2e7d50) */
+  filter: invert(44%) sepia(42%) saturate(480%) hue-rotate(106deg) brightness(100%) contrast(88%);
   cursor: pointer;
 }
 

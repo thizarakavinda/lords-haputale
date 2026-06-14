@@ -6,7 +6,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative overflow-hidden" style={{ background: 'rgb(4, 8, 6)', borderTop: '1px solid rgba(197, 168, 128, 0.12)' }}>
+    <footer className="relative overflow-hidden" style={{ background: 'rgb(13, 26, 17)', borderTop: '1px solid rgba(197, 168, 128, 0.14)' }}>
 
       {/* Dramatic watermark behind content */}
       <div className="absolute inset-0 flex items-start justify-center pointer-events-none select-none overflow-hidden">
@@ -58,9 +58,9 @@ export default function Footer() {
                   href={href}
                   aria-label={label}
                   className="w-10 h-10 flex items-center justify-center text-[var(--lords-smoke)] transition-all duration-300 hover:text-[var(--lords-gold)] rounded-sm"
-                  style={{ border: '1px solid rgba(197,168,128,0.18)' }}
+                  style={{ border: '1px solid rgba(26, 48, 35, 0.7)' }}
                   onMouseEnter={e => (e.currentTarget.style.borderColor = 'rgba(197,168,128,0.6)')}
-                  onMouseLeave={e => (e.currentTarget.style.borderColor = 'rgba(197,168,128,0.18)')}
+                  onMouseLeave={e => (e.currentTarget.style.borderColor = 'rgba(26,48,35,0.7)')}
                 >
                   <Icon size={15} />
                 </a>
@@ -139,7 +139,7 @@ export default function Footer() {
         </div>
 
         {/* Separator */}
-        <div className="h-px w-full mb-8" style={{ background: 'rgba(197,168,128,0.12)' }} />
+        <div className="h-px w-full mb-8" style={{ background: 'rgba(46, 125, 80, 0.18)' }} />
 
         {/* Bottom bar */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-3">

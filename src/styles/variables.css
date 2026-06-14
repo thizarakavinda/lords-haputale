@@ -1,36 +1,37 @@
 :root {
-  /* Color Variables - Dark Forest Theme */
+  /* Color Variables — Forest Green · Mist White · Warm Beige · Gold Accent */
   --lords-white: #FFFFFF;
-  
-  /* Backgrounds */
-  --lords-mist: #050a07;   /* Deepest, richest forest black-green (Main BG) */
-  --lords-fog: #09120d;    /* Rich, dark moss surface */
-  --lords-stone: #112017;  /* Borders and raised glass surfaces */
-  
-  /* Accents */
-  --lords-bark: #8b7355;   /* Warm wood bark */
-  --lords-moss: #1c3525;   /* Deep forest moss green */
-  --lords-forest: #0d1a12; /* Dark pine shadow */
-  --lords-earth: #060e0a;  /* Undergrowth shadow */
-  
-  --lords-gold: #c5a880;   /* Muted, premium champagne gold (luxury accent) */
-  --lords-gold-light: #e6d5bf; /* Soft cream gold */
-  
-  /* Text */
-  --lords-cream: #f4f7f5;    /* Crisp off-white/cream for high contrast titles */
-  --lords-charcoal: #e1e7e3; /* Main readable text */
-  --lords-smoke: #9ab0a2;    /* Elegant sage green-gray for secondary text */
-  --lords-muted: #5e7567;    /* Deep sage for secondary labels and borders */
 
-  /* Font Families */
+  /* ── Backgrounds (kept dark so the Galaxy canvas shines through) ── */
+  --lords-mist:   #050a07;   /* Deepest bg — matches Galaxy canvas fill exactly */
+  --lords-fog:    #0d1a11;   /* Dark forest card/section surface */
+  --lords-stone:  #1a3023;   /* Borders and raised glass panels */
+
+  /* ── Forest Greens ── */
+  --lords-bark:   #5a7a62;   /* Mid-tone forest sage for subtle accents */
+  --lords-moss:   #2e7d50;   /* Vibrant forest green — CTAs, highlights, buttons */
+  --lords-forest: #1a4a2e;   /* Deep forest shadow used for dark overlays */
+  --lords-earth:  #060e0a;   /* Near-black undergrowth for deepest shadows */
+
+  /* ── Gold Accent (luxury signature) ── */
+  --lords-gold:       #c5a880;   /* Warm champagne gold */
+  --lords-gold-light: #e6d5bf;   /* Soft cream gold for hover/light states */
+
+  /* ── Text ── */
+  --lords-cream:    #f0f5f2;   /* Mist White — primary headings and titles */
+  --lords-charcoal: #dce8e0;   /* Mist White soft — main body text */
+  --lords-smoke:    #c4b49a;   /* Warm Beige — secondary text and descriptions */
+  --lords-muted:    #8a9070;   /* Warm sage — labels, captions, muted borders */
+
+  /* ── Font Families ── */
   --font-display: 'Bodoni Moda', serif;
-  --font-serif: 'Cormorant Garamond', serif;
-  --font-body: 'DM Sans', sans-serif;
-  --font-label: 'Jost', sans-serif;
-  --font-quote: 'Playfair Display', serif;
+  --font-serif:   'Cormorant Garamond', serif;
+  --font-body:    'DM Sans', sans-serif;
+  --font-label:   'Jost', sans-serif;
+  --font-quote:   'Playfair Display', serif;
 
-  /* Text Sizes - Dynamic */
+  /* ── Text Sizes — Dynamic ── */
   --text-display: clamp(48px, 8vw, 88px);
-  --text-h1: clamp(36px, 5vw, 64px);
-  --text-h2: clamp(28px, 4vw, 48px);
+  --text-h1:      clamp(36px, 5vw, 64px);
+  --text-h2:      clamp(28px, 4vw, 48px);
 }

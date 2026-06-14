@@ -56,8 +56,8 @@ function App() {
         density={0.9}
         starSpeed={0.25}
         glowIntensity={0.4}
-        hueShift={145}
-        saturation={18}
+        hueShift={140}
+        saturation={22}
         className="fixed inset-0 w-screen h-screen"
         style={{ zIndex: -1 }}
       />

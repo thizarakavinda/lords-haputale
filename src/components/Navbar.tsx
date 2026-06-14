@@ -18,9 +18,9 @@ export default function Navbar() {
       <header 
         className="fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] md:w-[calc(100%-4rem)] max-w-[1280px] h-[72px] z-50 rounded-full border border-[var(--lords-stone)]/50 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
         style={{
-          background: 'rgba(5, 10, 7, 0.75)',
-          backdropFilter: 'blur(16px)',
-          WebkitBackdropFilter: 'blur(16px)',
+          background: 'rgba(13, 26, 17, 0.78)',
+          backdropFilter: 'blur(18px)',
+          WebkitBackdropFilter: 'blur(18px)',
         }}
       >
         <div className="w-full h-full px-8 md:px-12 flex items-center justify-between">
