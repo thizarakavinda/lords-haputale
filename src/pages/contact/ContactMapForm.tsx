@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Check } from 'lucide-react';
+import { submitContactInquiry } from '../../services/contactService';
 
 // ContactMapForm houses the Google Map and floating overlay Contact Form
 export default function ContactMapForm() {
@@ -12,21 +13,30 @@ export default function ContactMapForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Form Submit Handler
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!name || !email || !message) return;
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  if (!name || !email || !message) return;
 
-    setIsSubmitting(true);
-    // Simulate contact form submission API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      setName('');
-      setEmail('');
-      setPhone('');
-      setMessage('');
-    }, 1200);
-  };
+  setIsSubmitting(true);
+  try {
+    await submitContactInquiry({
+      name,
+      email,
+      phone,
+      message,
+      subject: "Contact Form Inquiry",
+    });
+    setIsSubmitted(true);
+    setName('');
+    setEmail('');
+    setPhone('');
+    setMessage('');
+  } catch (error) {
+    console.error("Failed to submit inquiry:", error);
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   return (
     <section className="relative w-full lg:h-[700px] flex flex-col lg:block bg-[var(--lords-mist)]">
