@@ -4,6 +4,7 @@ import BookingHero from './BookingHero';
 import BookingWhyDirect from './BookingWhyDirect';
 import BookingForm from './BookingForm';
 import BookingSidebar from './BookingSidebar';
+import { submitBooking, generateBookingRef } from '../../services/bookingService';
 
 // Room types metadata definition
 interface RoomType {
@@ -175,19 +176,39 @@ export default function Booking() {
   };
 
   // Submit request
-  const handleBookingSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!isStep1Valid || !isStep2Valid) return;
+  const handleBookingSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  if (!isStep1Valid || !isStep2Valid) return;
 
-    setIsSubmitting(true);
-    // Simulate booking API request
-    setTimeout(() => {
-      const randomRef = `LH-2026-${Math.floor(1000 + Math.random() * 9000)}`;
-      setBookingRef(randomRef);
-      setIsSubmitting(false);
-      setStep(4);
-    }, 1500);
-  };
+  setIsSubmitting(true);
+  try {
+    const ref = generateBookingRef();
+
+    await submitBooking({
+      fullName,
+      email,
+      phone,
+      country,
+      checkIn,
+      checkOut,
+      adults,
+      children,
+      roomType,
+      roomName: selectedRoom.name,
+      nights,
+      totalPrice: pricing.total,
+      specialRequests,
+      bookingRef: ref,
+    });
+
+    setBookingRef(ref);
+    setStep(4);
+  } catch (error) {
+    console.error("Booking submission failed:", error);
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   // Format Helper
   const formatDisplayDate = (dateStr: string) => {
