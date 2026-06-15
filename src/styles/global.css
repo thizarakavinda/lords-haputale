@@ -1,0 +1,172 @@
+@import 'tailwindcss';
+@import './variables.css';
+
+@layer base {
+  html {
+    scroll-behavior: initial;
+    /* Lenis handles smooth scroll */
+  }
+
+  body {
+    background-color: rgb(5, 10, 7);
+    /* Locked to Galaxy canvas fill — do not change */
+    color: var(--lords-charcoal);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    font-weight: 400;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Forest Green Glassmorphism Utilities */
+  .glass-panel {
+    background: rgba(13, 26, 17, 0.52);
+    /* Forest-green tinted dark glass */
+    border: 1px solid rgba(197, 168, 128, 0.15);
+    box-shadow:
+      0 20px 50px 0 rgba(0, 0, 0, 0.5),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+  }
+
+  .glass-panel-light {
+    background: rgba(26, 48, 35, 0.58);
+    /* Richer forest green for highlighted panels */
+    border: 1px solid rgba(197, 168, 128, 0.25);
+    box-shadow:
+      0 12px 32px 0 rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+  }
+
+  /* Image Placeholder Utility */
+  .image-placeholder {
+    background: linear-gradient(135deg, var(--lords-fog) 0%, var(--lords-stone) 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .image-placeholder::after {
+    content: attr(data-image-name);
+    font-family: var(--font-label);
+    font-size: 11px;
+    color: var(--lords-muted);
+    text-transform: uppercase;
+    position: absolute;
+    z-index: 10;
+  }
+}
+
+/* Lenis Recommended CSS */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+@theme {
+  --animate-marquee: marquee 20s linear infinite;
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  /* Recolours browser date icon to match --lords-moss (#2e7d50) */
+  filter: invert(44%) sepia(42%) saturate(480%) hue-rotate(106deg) brightness(100%) contrast(88%);
+  cursor: pointer;
+}
+
+/* Testimonial infinite scroll rows */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+/* Custom Swiper Coverflow Pagination Bullets */
+.attractions-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 36px;
+}
+
+.attractions-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(197, 168, 128, 0.35);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.attractions-bullet:hover {
+  background-color: rgba(197, 168, 128, 0.6);
+}
+
+.attractions-bullet-active {
+  background-color: var(--lords-gold) !important;
+  transform: scale(1.25);
+}
+
+/* Force Slide dimensions to prevent stretching */
+.attractions-swiper .swiper-slide {
+  width: 200px !important;
+  height: 280px !important;
+}
+
+@media (min-width: 768px) {
+  .attractions-swiper .swiper-slide {
+    width: 240px !important;
+    height: 340px !important;
+  }
+}
