@@ -66,13 +66,13 @@ export default function AboutHero() {
   }, []);
 
   return (
-    <section 
+    <section
       ref={heroSectionRef}
       className="relative min-h-[95vh] flex items-center justify-center pt-24 pb-12 overflow-hidden"
     >
       {/* Core Content Container */}
       <div className="relative w-full max-w-[1440px] mx-auto min-h-[80vh] flex flex-col justify-center items-center px-6">
-        
+
         {/* Breadcrumbs - Top Left */}
         <div className="absolute top-8 left-6 md:left-16 lg:left-24 z-25">
           <span className="font-label text-[9px] uppercase tracking-[0.45em] text-[var(--lords-muted)]">
@@ -109,14 +109,14 @@ export default function AboutHero() {
         </div>
 
         {/* CENTERPIECE: Architectural Archway Portal */}
-        <div 
+        <div
           ref={heroImageContainerRef}
-          className="relative w-[75%] sm:w-[45%] md:w-[35%] aspect-[3/4.5] md:h-[65vh] md:max-h-[580px] overflow-hidden rounded-t-full border border-[var(--lords-gold)]/20 shadow-[0_30px_70px_rgba(0,0,0,0.85)] z-10 bg-[var(--lords-stone)]/20"
+          className="relative w-[75%] sm:w-[45%] md:w-[35%] aspect-[3/4.5] md:h-[65vh] md:max-h-[580px] overflow-hidden rounded-t-full border border-[var(--lords-gold)]/20 shadow-[0_16px_48px_rgba(74,103,65,0.16)] z-10 bg-[var(--lords-stone)]/20"
         >
-          <img 
+          <img
             ref={heroImageRef}
-            src="/images/about/hero.webp" 
-            alt="Lord's Haputale aerial view through viewport" 
+            src="/images/about/hero.webp"
+            alt="Lord's Haputale aerial view through viewport"
             className="w-full h-[100%] object-cover absolute -top-[10%]"
           />
           {/* Embedded dark inner vignette shadow */}
@@ -126,9 +126,10 @@ export default function AboutHero() {
         {/* OVERLAY TYPOGRAPHY: Spanning 3D Depth Layer */}
         {/* "Our" - Overlapping Top Left of Arch */}
         <div className="absolute top-[22%] left-[4%] sm:left-[15%] md:left-[22%] lg:left-[25%] z-20 pointer-events-none">
-          <span 
+          <span
             ref={el => { wordRefs.current[0] = el; }}
-            className="block font-display font-light italic text-[clamp(80px,13vw,175px)] text-[var(--lords-gold)] leading-none select-none drop-shadow-[0_15px_30px_rgba(0,0,0,0.7)]"
+            className="block font-display font-light italic text-[clamp(80px,13vw,175px)] text-[var(--lords-gold)] leading-none select-none drop-shadow-[0_8px_16px_rgba(74,103,65,0.14)]"
+            style={{ textShadow: '0 0 16px rgba(255, 255, 255, 1), 0 0 8px rgba(255, 255, 255, 0.9)' }}
           >
             Our
           </span>
@@ -136,9 +137,10 @@ export default function AboutHero() {
 
         {/* "Story" - Overlapping Bottom Right of Arch */}
         <div className="absolute bottom-[22%] right-[4%] sm:right-[15%] md:right-[22%] lg:right-[25%] z-20 pointer-events-none">
-          <span 
+          <span
             ref={el => { wordRefs.current[1] = el; }}
-            className="block font-display font-bold uppercase tracking-tighter text-[clamp(80px,13vw,175px)] text-[var(--lords-cream)] leading-none select-none drop-shadow-[0_15px_30px_rgba(0,0,0,0.7)]"
+            className="block font-display font-bold uppercase tracking-tighter text-[clamp(80px,13vw,175px)] text-[var(--lords-cream)] leading-none select-none drop-shadow-[0_8px_16px_rgba(74,103,65,0.14)]"
+            style={{ textShadow: '0 0 16px rgba(255, 255, 255, 1), 0 0 8px rgba(255, 255, 255, 0.9)' }}
           >
             Story
           </span>

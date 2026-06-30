@@ -62,10 +62,12 @@ function TestimonialCard({ t }: { t: typeof testimonials[0] }) {
     <div
       className="shrink-0 w-[340px] md:w-[400px] flex flex-col justify-between px-8 py-8 mx-3"
       style={{
-        background: 'rgba(9, 18, 13, 0.3)',
-        border: '1px solid rgba(197,168,128,0.18)',
-        borderRadius: '4px',
-        boxShadow: '0 16px 48px rgba(0,0,0,0.35)',
+        background: 'rgba(255, 255, 255, 0.55)',
+        backdropFilter: 'blur(14px)',
+        WebkitBackdropFilter: 'blur(14px)',
+        border: '1px solid rgba(168, 197, 160, 0.45)',
+        borderRadius: '12px',
+        boxShadow: '0 4px 24px rgba(74, 103, 65, 0.10)',
       }}
     >
       {/* Big decorative quote */}
@@ -98,7 +100,7 @@ function TestimonialCard({ t }: { t: typeof testimonials[0] }) {
         {/* Rating badge */}
         <div
           className="flex flex-col items-center justify-center w-12 h-12"
-          style={{ border: '1px solid rgba(197,168,128,0.25)', background: 'rgba(197,168,128,0.06)' }}
+          style={{ border: '1px solid rgba(168, 197, 160, 0.45)', background: 'rgba(74, 103, 65, 0.06)' }}
         >
           <span className="font-display text-[18px] leading-none" style={{ color: 'var(--lords-gold)' }}>5</span>
           <span className="font-label text-[7px] tracking-widest" style={{ color: 'var(--lords-muted)' }}>/ 5</span>
@@ -131,7 +133,9 @@ export default function HomeTestimonials() {
       ref={sectionRef}
       className="py-24 md:py-[120px] relative z-10 overflow-hidden"
       style={{
-        background: 'rgba(5,10,7,0.5)',
+        background: 'rgba(240, 244, 239, 0.55)',
+        backdropFilter: 'blur(6px)',
+        WebkitBackdropFilter: 'blur(6px)',
       }}
     >
       <div className="max-w-[1440px] mx-auto px-6 md:px-20 mb-14">
@@ -152,13 +156,13 @@ export default function HomeTestimonials() {
           {/* Aggregate rating badge */}
           <div
             className="flex items-center gap-4 px-6 py-4 shrink-0"
-            style={{ border: '1px solid rgba(197,168,128,0.25)', background: 'rgba(197,168,128,0.05)' }}
+            style={{ border: '1px solid rgba(168, 197, 160, 0.45)', background: 'rgba(240, 244, 239, 0.6)' }}
           >
             <div>
               <span className="font-display text-[38px] leading-none" style={{ color: 'var(--lords-gold)' }}>5.0</span>
               <p className="font-label text-[9px] uppercase tracking-widest mt-1" style={{ color: 'var(--lords-muted)' }}>Average Rating</p>
             </div>
-            <div className="h-12 w-px" style={{ background: 'rgba(197,168,128,0.2)' }} />
+            <div className="h-12 w-px" style={{ background: 'rgba(168, 197, 160, 0.45)' }} />
             <div>
               <StarRow count={5} />
               <p className="font-label text-[9px] uppercase tracking-widest mt-1.5" style={{ color: 'var(--lords-muted)' }}>
@@ -174,11 +178,11 @@ export default function HomeTestimonials() {
         {/* Fade edges */}
         <div
           className="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
-          style={{ background: 'linear-gradient(to right, rgb(5,10,7), transparent)' }}
+          style={{ background: 'linear-gradient(to right, rgb(240,244,239), transparent)' }}
         />
         <div
           className="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
-          style={{ background: 'linear-gradient(to left, rgb(5,10,7), transparent)' }}
+          style={{ background: 'linear-gradient(to left, rgb(240,244,239), transparent)' }}
         />
 
         <div
@@ -201,11 +205,11 @@ export default function HomeTestimonials() {
         {/* Fade edges */}
         <div
           className="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
-          style={{ background: 'linear-gradient(to right, rgb(5,10,7), transparent)' }}
+          style={{ background: 'linear-gradient(to right, rgb(240,244,239), transparent)' }}
         />
         <div
           className="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
-          style={{ background: 'linear-gradient(to left, rgb(5,10,7), transparent)' }}
+          style={{ background: 'linear-gradient(to left, rgb(240,244,239), transparent)' }}
         />
 
         <div

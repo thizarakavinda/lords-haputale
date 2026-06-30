@@ -1,12 +1,11 @@
 import { Link } from 'react-router-dom';
 import { Instagram, Facebook, Youtube, Phone, Mail, MapPin, ArrowUpRight } from 'lucide-react';
-import MarqueeStrip from './MarqueeStrip';
 
 export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative overflow-hidden" style={{ background: 'rgb(13, 26, 17)', borderTop: '1px solid rgba(197, 168, 128, 0.14)' }}>
+    <footer className="relative overflow-hidden" style={{ background: 'var(--lords-fog)', borderTop: '1px solid rgba(168, 197, 160, 0.45)' }}>
 
       {/* Dramatic watermark behind content */}
       <div className="absolute inset-0 flex items-start justify-center pointer-events-none select-none overflow-hidden">
@@ -17,9 +16,6 @@ export default function Footer() {
           LORD'S
         </span>
       </div>
-
-      {/* Gold marquee at top */}
-      <MarqueeStrip variant="gold" />
 
       {/* ─── Main content ─── */}
       <div className="max-w-[1440px] mx-auto w-full px-6 md:px-16 pt-20 pb-10 relative z-10">
@@ -50,17 +46,17 @@ export default function Footer() {
             <div className="flex gap-3">
               {[
                 { Icon: Instagram, label: 'Instagram', href: '#' },
-                { Icon: Facebook,  label: 'Facebook',  href: '#' },
-                { Icon: Youtube,   label: 'YouTube',   href: '#' },
+                { Icon: Facebook, label: 'Facebook', href: '#' },
+                { Icon: Youtube, label: 'YouTube', href: '#' },
               ].map(({ Icon, label, href }) => (
                 <a
                   key={label}
                   href={href}
                   aria-label={label}
                   className="w-10 h-10 flex items-center justify-center text-[var(--lords-smoke)] transition-all duration-300 hover:text-[var(--lords-gold)] rounded-sm"
-                  style={{ border: '1px solid rgba(26, 48, 35, 0.7)' }}
-                  onMouseEnter={e => (e.currentTarget.style.borderColor = 'rgba(197,168,128,0.6)')}
-                  onMouseLeave={e => (e.currentTarget.style.borderColor = 'rgba(26,48,35,0.7)')}
+                  style={{ border: '1px solid rgba(74, 103, 65, 0.25)' }}
+                  onMouseEnter={e => (e.currentTarget.style.borderColor = 'rgba(74, 103, 65, 0.6)')}
+                  onMouseLeave={e => (e.currentTarget.style.borderColor = 'rgba(74, 103, 65, 0.25)')}
                 >
                   <Icon size={15} />
                 </a>
@@ -76,9 +72,9 @@ export default function Footer() {
               <h4 className="font-label text-[10px] uppercase tracking-[0.4em] text-[var(--lords-gold)] mb-6">Explore</h4>
               <nav className="flex flex-col gap-3.5">
                 {[
-                  { label: 'Home',    to: '/' },
-                  { label: 'About',   to: '/about' },
-                  { label: 'Rooms',   to: '/rooms' },
+                  { label: 'Home', to: '/' },
+                  { label: 'About', to: '/about' },
+                  { label: 'Rooms', to: '/rooms' },
                   { label: 'Gallery', to: '/gallery' },
                   { label: 'Contact', to: '/contact' },
                 ].map(({ label, to }) => (
@@ -139,7 +135,7 @@ export default function Footer() {
         </div>
 
         {/* Separator */}
-        <div className="h-px w-full mb-8" style={{ background: 'rgba(46, 125, 80, 0.18)' }} />
+        <div className="h-px w-full mb-8" style={{ background: 'var(--lords-stone)' }} />
 
         {/* Bottom bar */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-3">

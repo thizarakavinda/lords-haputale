@@ -19,6 +19,7 @@ interface GalaxyProps {
   saturation?: number;
   className?: string;
   style?: React.CSSProperties;
+  lightMode?: boolean;
 }
 
 export default function Galaxy({
@@ -30,6 +31,7 @@ export default function Galaxy({
   saturation = 18,
   className = '',
   style,
+  lightMode = false,
 }: GalaxyProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -73,7 +75,7 @@ export default function Galaxy({
       if (transparent) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
       } else {
-        ctx.fillStyle = 'rgb(5, 10, 7)';
+        ctx.fillStyle = lightMode ? '#FFFFFF' : 'rgb(5, 10, 7)';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
       }
 
@@ -103,13 +105,13 @@ export default function Galaxy({
 
         const alpha = Math.min(1, (1 - star.z / canvas.width) * 1.6);
         const size = Math.max(0.05, star.size * (1 - star.z / canvas.width) * 2.5);
-        const l = 55 + alpha * 30;
+        const l = lightMode ? (22 + alpha * 18) : (55 + alpha * 30);
 
         // Trail line
         ctx.beginPath();
         ctx.moveTo(star.px, star.py);
         ctx.lineTo(sx, sy);
-        ctx.strokeStyle = `hsla(${star.hue}, ${saturation}%, ${l}%, ${alpha * 0.35})`;
+        ctx.strokeStyle = `hsla(${star.hue}, ${saturation}%, ${l}%, ${alpha * (lightMode ? 0.55 : 0.35)})`;
         ctx.lineWidth = size * 0.5;
         ctx.stroke();
 
@@ -117,7 +119,9 @@ export default function Galaxy({
         if (glowIntensity > 0) {
           ctx.beginPath();
           ctx.arc(sx, sy, size * 2.5 * glowIntensity, 0, Math.PI * 2);
-          ctx.fillStyle = `hsla(${star.hue}, ${saturation + 25}%, 80%, ${alpha * 0.18})`;
+          ctx.fillStyle = lightMode
+            ? `hsla(${star.hue}, ${saturation + 15}%, 35%, ${alpha * 0.25})`
+            : `hsla(${star.hue}, ${saturation + 25}%, 80%, ${alpha * 0.18})`;
           ctx.fill();
         }
 
@@ -136,7 +140,7 @@ export default function Galaxy({
       cancelAnimationFrame(animFrameId);
       window.removeEventListener('resize', setSize);
     };
-  }, [density, starSpeed, glowIntensity, transparent, hueShift, saturation]);
+  }, [density, starSpeed, glowIntensity, transparent, hueShift, saturation, lightMode]);
 
   return (
     <canvas

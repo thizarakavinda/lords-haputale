@@ -51,7 +51,6 @@ function App() {
 
   return (
     <div className="flex flex-col min-h-screen relative">
-      {/* Fixed Galaxy background — visible through all glass panels */}
       <Galaxy
         density={0.9}
         starSpeed={0.25}
@@ -60,6 +59,7 @@ function App() {
         saturation={22}
         className="fixed inset-0 w-screen h-screen"
         style={{ zIndex: -1 }}
+        lightMode={true}
       />
       <Navbar />
       <main className="flex-grow">

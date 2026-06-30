@@ -2,12 +2,12 @@ import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { 
-  Check, 
-  X, 
-  BedDouble, 
-  ArrowRight, 
-  Calendar, 
+import {
+  Check,
+  X,
+  BedDouble,
+  ArrowRight,
+  Calendar,
   Users,
   Bath,
   Tv,
@@ -140,52 +140,52 @@ export default function Rooms() {
 
   return (
     <div className="w-full bg-transparent text-[var(--lords-charcoal)] overflow-hidden">
-      
+
       {/* ================================================================
           SECTION 1 — HERO
           ================================================================ */}
-      <section 
+      <section
         ref={heroSectionRef}
         className="relative h-screen min-h-[750px] flex flex-col justify-between overflow-hidden"
       >
         {/* Background Image (Converted from video to webp) */}
         <div className="absolute inset-0 z-0">
-          <video 
+          <video
             autoPlay
             muted
             loop
-            playsInline   
-            src="/videos/room back.webm" 
-            
+            playsInline
+            src="/videos/room back.webm"
+
             className="w-full h-full object-cover"
           />
-          {/* Deep Overlay for Luxury Contrast */}
-          <div className="absolute inset-0 bg-black/60" />
+          {/* Dark overlay for text readability over video */}
+          <div className="absolute inset-0 bg-black/30 bg-gradient-to-t from-black/60 via-black/25 to-black/15" />
         </div>
 
         {/* Content Container */}
         <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 md:px-20 pt-40 flex-grow flex flex-col justify-center">
-          
+
           <div className="text-center md:text-left mb-6">
-            <span className="font-label text-[10px] uppercase tracking-[0.45em] text-[var(--lords-gold)] block mb-4">
+            <span className="font-label text-[10px] uppercase tracking-[0.45em] text-[#A8C5A0] block mb-4">
               BOUTIQUE SANCTUARY
             </span>
-            <h1 className="font-display text-[clamp(48px,8vw,96px)] text-[var(--lords-cream)] leading-[1.05] tracking-tighter uppercase mb-4">
+            <h1 className="font-display text-[clamp(48px,8vw,96px)] text-white leading-[1.05] tracking-tighter uppercase mb-4">
               <span ref={el => { heroTitleRefs.current[0] = el; }} className="block font-light text-white/50">Our</span>
-              <span ref={el => { heroTitleRefs.current[1] = el; }} className="block font-bold text-[var(--lords-gold)]">Rooms</span>
+              <span ref={el => { heroTitleRefs.current[1] = el; }} className="block font-bold text-[#A8C5A0]">Rooms</span>
             </h1>
           </div>
 
           <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-16">
-            <p ref={heroTextRef} className="font-body text-sm md:text-[16px] text-[var(--lords-smoke)] max-w-[420px] leading-relaxed text-center md:text-left">
+            <p ref={heroTextRef} className="font-body text-sm md:text-[16px] text-white/80 max-w-[420px] leading-relaxed text-center md:text-left">
               Three carefully curated room types. Each designed for a different kind of escape.
             </p>
-            
+
             <div className="hidden md:flex flex-col items-end text-right absolute right-20 bottom-44 z-20">
-              <a 
-                href="#compare-section" 
+              <a
+                href="#compare-section"
                 onClick={handleScrollToComparison}
-                className="font-label text-[11px] uppercase tracking-widest text-[var(--lords-gold)] hover:text-[var(--lords-gold-light)] flex items-center gap-2 border-b border-[var(--lords-gold)]/20 hover:border-[var(--lords-gold-light)] pb-1 transition-all"
+                className="font-label text-[11px] uppercase tracking-widest text-[#A8C5A0] hover:text-white flex items-center gap-2 border-b border-white/20 hover:border-white pb-1 transition-all"
               >
                 Compare Rooms <ArrowRight size={12} className="rotate-90" />
               </a>
@@ -193,19 +193,19 @@ export default function Rooms() {
           </div>
 
           {/* Availability Check Bar (Screenshot Inspired) */}
-          <div 
+          <div
             ref={heroBarRef}
             className="w-full max-w-[1000px] mx-auto mt-2 z-20 px-4 md:px-0"
           >
-            <div 
-              className="glass-panel w-full rounded-2xl md:rounded-full py-5 px-8 md:px-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[28%_28%_20%_24%] gap-6 md:gap-4 items-center border border-[var(--lords-gold)]/20 shadow-2xl backdrop-blur-md"
+            <div
+              className="glass-panel w-full rounded-2xl md:rounded-full py-5 px-8 md:px-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[28%_28%_20%_24%] gap-6 md:gap-4 items-center"
             >
               {/* Check In Date */}
               <div className="flex flex-col">
                 <span className="font-label text-[9px] uppercase tracking-[0.2em] text-[var(--lords-muted)] mb-1.5 flex items-center gap-1.5">
                   <Calendar size={11} className="text-[var(--lords-gold)]" /> Check In
                 </span>
-                <input 
+                <input
                   type="date"
                   value={checkIn}
                   onChange={(e) => setCheckIn(e.target.value)}
@@ -218,7 +218,7 @@ export default function Rooms() {
                 <span className="font-label text-[9px] uppercase tracking-[0.2em] text-[var(--lords-muted)] mb-1.5 flex items-center gap-1.5">
                   <Calendar size={11} className="text-[var(--lords-gold)]" /> Check Out
                 </span>
-                <input 
+                <input
                   type="date"
                   value={checkOut}
                   onChange={(e) => setCheckOut(e.target.value)}
@@ -231,14 +231,14 @@ export default function Rooms() {
                 <span className="font-label text-[9px] uppercase tracking-[0.2em] text-[var(--lords-muted)] mb-1.5 flex items-center gap-1.5">
                   <Users size={11} className="text-[var(--lords-gold)]" /> Guests
                 </span>
-                <select 
-                  value={guests} 
+                <select
+                  value={guests}
                   onChange={(e) => setGuests(e.target.value)}
                   className="bg-transparent border-0 text-[14px] font-body text-[var(--lords-cream)] focus:outline-none focus:ring-0 w-full cursor-pointer pr-4"
                 >
-                  <option value="1" className="bg-[var(--lords-mist)] text-white">1 Guest</option>
-                  <option value="2" className="bg-[var(--lords-mist)] text-white">2 Guests</option>
-                  <option value="3" className="bg-[var(--lords-mist)] text-white">3 Guests</option>
+                  <option value="1" className="bg-[var(--lords-mist)] text-[var(--lords-cream)]">1 Guest</option>
+                  <option value="2" className="bg-[var(--lords-mist)] text-[var(--lords-cream)]">2 Guests</option>
+                  <option value="3" className="bg-[var(--lords-mist)] text-[var(--lords-cream)]">3 Guests</option>
                 </select>
               </div>
 
@@ -246,7 +246,7 @@ export default function Rooms() {
               <div className="w-full md:pl-4">
                 <Link
                   to={`/booking?in=${checkIn}&out=${checkOut}&guests=${guests}`}
-                  className="w-full bg-[var(--lords-gold)] hover:bg-[var(--lords-gold-light)] text-[var(--lords-mist)] font-label text-[11px] uppercase tracking-widest font-semibold py-4.5 px-6 rounded-full transition-colors flex items-center justify-center gap-2 shadow-lg"
+                  className="w-full bg-[var(--lords-gold)] hover:bg-[var(--lords-gold-light)] text-white hover:text-[var(--lords-cream)] font-label text-[11px] uppercase tracking-widest font-semibold py-4.5 px-6 rounded-full transition-all flex items-center justify-center gap-2 shadow-lg"
                 >
                   Check Rates
                 </Link>
@@ -258,9 +258,9 @@ export default function Rooms() {
 
         {/* Bottom Panel & Landscape Preview Strip */}
         <div ref={heroBottomRef} className="w-full mt-16 relative z-10">
-          
+
           {/* Stats Bar */}
-          <div className="max-w-[1440px] mx-auto w-full px-6 md:px-20 py-6 border-b border-[var(--lords-stone)]/20 bg-black/25 backdrop-blur-sm">
+          <div className="max-w-[1440px] mx-auto w-full px-6 md:px-20 py-6 border-b border-white/10 bg-[rgba(20,25,22,0.85)] backdrop-blur-md">
             {/* Mobile: 3-column centered stats only */}
             <div className="grid grid-cols-3 gap-4 md:hidden">
               {[
@@ -269,29 +269,29 @@ export default function Rooms() {
                 { value: '1,430m', label: 'Elevation' },
               ].map((stat) => (
                 <div key={stat.label} className="flex flex-col items-center text-center">
-                  <span className="font-display text-3xl text-[var(--lords-gold)] leading-none">{stat.value}</span>
-                  <span className="font-label text-[9px] uppercase tracking-wider text-[var(--lords-muted)] mt-1.5">{stat.label}</span>
+                  <span className="font-display text-3xl text-[#A8C5A0] leading-none">{stat.value}</span>
+                  <span className="font-label text-[9px] uppercase tracking-wider text-white/60 mt-1.5">{stat.label}</span>
                 </div>
               ))}
             </div>
 
             {/* Desktop: two-column with description + stats */}
             <div className="hidden md:grid grid-cols-2 gap-8 items-center">
-              <p className="font-body text-[12px] text-[var(--lords-smoke)]/80 leading-relaxed max-w-[480px]">
+              <p className="font-body text-[12px] text-white/80 leading-relaxed max-w-[480px]">
                 We embrace the allure of wanderlust, offering bespoke lodging to embark on your mountain adventure, discovering highland comfort amidst the clouds.
               </p>
               <div className="flex justify-end gap-16">
                 <div className="flex flex-col">
-                  <span className="font-display text-2xl text-[var(--lords-gold)]">50+</span>
-                  <span className="font-label text-[8px] uppercase tracking-wider text-[var(--lords-muted)]">Happy Guests</span>
+                  <span className="font-display text-2xl text-[#A8C5A0]">50+</span>
+                  <span className="font-label text-[8px] uppercase tracking-wider text-white/60">Happy Guests</span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="font-display text-2xl text-[var(--lords-gold)]">3</span>
-                  <span className="font-label text-[8px] uppercase tracking-wider text-[var(--lords-muted)]">Bespoke Rooms</span>
+                  <span className="font-display text-2xl text-[#A8C5A0]">3</span>
+                  <span className="font-label text-[8px] uppercase tracking-wider text-white/60">Bespoke Rooms</span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="font-display text-2xl text-[var(--lords-gold)]">1,430m</span>
-                  <span className="font-label text-[8px] uppercase tracking-wider text-[var(--lords-muted)]">Elevation</span>
+                  <span className="font-display text-2xl text-[#A8C5A0]">1,430m</span>
+                  <span className="font-label text-[8px] uppercase tracking-wider text-white/60">Elevation</span>
                 </div>
               </div>
             </div>
@@ -304,20 +304,20 @@ export default function Rooms() {
               { img: '/images/rooms/double room.webp', name: 'Double Room' },
               { img: '/images/rooms/small double room.webp', name: 'Small Double' },
             ].map((room, idx) => (
-              <a 
+              <a
                 key={idx}
                 href={`#room-0${idx + 1}`}
                 onClick={handleScrollToRooms}
                 className="group relative h-full w-full overflow-hidden border-r border-[var(--lords-stone)]/20 last:border-0"
               >
-                <img 
-                  src={room.img} 
-                  alt={room.name} 
+                <img
+                  src={room.img}
+                  alt={room.name}
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108"
                 />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="font-label text-[9px] md:text-[11px] uppercase tracking-[0.25em] text-[var(--lords-cream)] border border-[var(--lords-gold)]/10 px-3 py-1.5 bg-black/40 rounded-sm backdrop-blur-sm group-hover:border-[var(--lords-gold)] group-hover:text-[var(--lords-gold)] transition-colors">
+                  <span className="font-label text-[9px] md:text-[11px] uppercase tracking-[0.25em] text-white border border-[var(--lords-gold)]/10 bg-black/40 rounded-sm backdrop-blur-sm group-hover:border-[#A8C5A0] group-hover:text-[#A8C5A0] transition-colors">
                     {room.name}
                   </span>
                 </div>
@@ -335,32 +335,32 @@ export default function Rooms() {
       {/* ================================================================
           SECTION 2 — ROOM 1: TRIPLE ROOM (Asymmetrical Architectural Collage with Interactive Tabs)
           ================================================================ */}
-      <section 
-        id="room-01" 
+      <section
+        id="room-01"
         className="w-full py-24 md:py-32 px-6 md:px-16 lg:px-20 relative z-10 border-b border-[var(--lords-stone)]/20"
       >
         <div className="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-20 items-center">
-          
+
           {/* LEFT SIDE: Asymmetrical Layered Photo Frame Collage */}
           <div className="relative w-full aspect-[4/5] sm:aspect-[4/3] lg:aspect-[4/5] max-w-[580px] mx-auto">
             {/* Background Decorative Frame Layer */}
             <div className="absolute -inset-4 rounded-3xl border border-[var(--lords-gold)]/10 bg-[var(--lords-fog)]/30 backdrop-blur-sm -rotate-2 scale-98 pointer-events-none" />
-            
+
             {/* Fine Grid Blueprint Backdrop */}
             <div className="absolute inset-0 bg-[radial-gradient(var(--lords-gold)_0.5px,transparent_0.5px)] [background-size:16px_16px] opacity-15 pointer-events-none" />
-            
+
             {/* Primary Portrait Image */}
             <div className="w-full h-full rounded-2xl overflow-hidden border border-[var(--lords-gold)]/20 shadow-2xl relative group">
               <div className="w-full h-[120%] absolute -top-[10%] left-0 overflow-hidden transition-transform duration-700 ease-out group-hover:scale-103">
-                <img 
+                <img
                   ref={el => { roomImageRefs.current[0] = el; }}
-                  src="/images/rooms/tripple room.webp" 
-                  alt="Luxury Triple Room Suite" 
+                  src="/images/rooms/tripple room.webp"
+                  alt="Luxury Triple Room Suite"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none z-10" />
-              
+
               {/* Gold coordinates stamp inside the photo */}
               <div className="absolute bottom-6 left-6 font-label text-[9px] tracking-[0.25em] text-[var(--lords-gold-light)] bg-black/45 px-3 py-1.5 rounded-sm backdrop-blur-sm border border-[var(--lords-gold)]/15 z-20">
                 9.0298° N, 80.9575° E · ALT 1,430M
@@ -370,18 +370,18 @@ export default function Rooms() {
             {/* Overlapping Floating Second Detail Image/Badge */}
             <div className="absolute -bottom-6 -right-6 w-[160px] h-[200px] hidden sm:block rounded-xl overflow-hidden border border-[var(--lords-gold)]/25 shadow-2xl z-25 group">
               <div className="w-full h-full overflow-hidden transition-transform duration-700 ease-out group-hover:scale-105">
-                <img 
-                  src="/images/rooms/tripple room 2.webp" 
-                  alt="Triple Room Closeup Detail" 
+                <img
+                  src="/images/rooms/tripple room 2.webp"
+                  alt="Triple Room Closeup Detail"
                   className="w-full h-full object-cover object-left filter brightness-90"
                 />
               </div>
               <div className="absolute inset-0 bg-black/30 z-10" />
               <div className="absolute inset-0 flex flex-col justify-end p-4 z-20">
-                <span className="font-label text-[8px] uppercase tracking-widest text-[var(--lords-gold)] block mb-1">
+                <span className="font-label text-[8px] uppercase tracking-widest text-[#A8C5A0] block mb-1">
                   curated
                 </span>
-                <span className="font-display text-sm text-[var(--lords-cream)] font-light leading-tight">
+                <span className="font-display text-sm text-white font-light leading-tight">
                   Highland Sanctuary
                 </span>
               </div>
@@ -396,7 +396,7 @@ export default function Rooms() {
           </div>
 
           {/* RIGHT SIDE: Elegant Floating Editorial Card with Showcase Tabs */}
-          <div 
+          <div
             ref={el => { roomContentRefs.current[0] = el; }}
             className="relative flex flex-col justify-center w-full"
           >
@@ -429,11 +429,10 @@ export default function Rooms() {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab01(tab.id as any)}
-                  className={`font-label text-[10px] md:text-[11px] uppercase tracking-[0.25em] pb-1.5 transition-all relative cursor-pointer ${
-                    activeTab01 === tab.id 
-                      ? 'text-[var(--lords-gold)] font-medium' 
-                      : 'text-[var(--lords-smoke)]/60 hover:text-[var(--lords-smoke)]'
-                  }`}
+                  className={`font-label text-[10px] md:text-[11px] uppercase tracking-[0.25em] pb-1.5 transition-all relative cursor-pointer ${activeTab01 === tab.id
+                    ? 'text-[var(--lords-gold)] font-medium'
+                    : 'text-[var(--lords-smoke)]/60 hover:text-[var(--lords-smoke)]'
+                    }`}
                 >
                   {tab.label}
                   {activeTab01 === tab.id && (
@@ -507,7 +506,7 @@ export default function Rooms() {
                     ].map((pill, idx) => {
                       const IconComponent = pill.icon;
                       return (
-                        <span 
+                        <span
                           key={idx}
                           className="flex items-center gap-2 bg-[var(--lords-stone)]/40 text-[var(--lords-cream)] font-label text-[10px] uppercase tracking-wider px-3 py-2 rounded-sm border border-[var(--lords-gold)]/10"
                         >
@@ -532,11 +531,11 @@ export default function Rooms() {
                     <span className="font-body text-[12px] text-[var(--lords-muted)]">/ night</span>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center gap-4">
                   <Link
                     to="/booking?room=triple"
-                    className="bg-[var(--lords-gold)] hover:bg-[var(--lords-gold-light)] text-[var(--lords-mist)] font-label text-[11px] uppercase tracking-widest font-semibold px-8 py-4 rounded-sm transition-colors shadow-md"
+                    className="bg-[var(--lords-gold)] hover:bg-[var(--lords-gold-light)] text-white hover:text-[var(--lords-cream)] font-label text-[11px] uppercase tracking-widest font-semibold px-8 py-4 rounded-sm transition-all shadow-md"
                   >
                     Book Suite
                   </Link>
@@ -562,47 +561,47 @@ export default function Rooms() {
       {/* ================================================================
           SECTION 3 — ROOM 2: DOUBLE ROOM (Widescreen Cinematic Letterbox & Staggered Columns)
           ================================================================ */}
-      <section 
-        id="room-02" 
+      <section
+        id="room-02"
         className="w-full py-24 md:py-32 px-6 md:px-16 lg:px-20 relative z-10 bg-transparent border-b border-[var(--lords-stone)]/20"
       >
         <div className="max-w-[1280px] mx-auto flex flex-col gap-12 md:gap-16">
-          
+
           {/* CINEMATIC WIDESCREEN VIEWPORT (21:9 Widescreen Frame) */}
           <div className="w-full aspect-[16/9] sm:aspect-[21/9] rounded-2xl overflow-hidden border border-[var(--lords-gold)]/20 shadow-2xl relative group">
             <div className="absolute inset-0 bg-black/35 z-10 transition-colors duration-700 group-hover:bg-black/20" />
             <div className="w-full h-[120%] absolute -top-[10%] left-0 overflow-hidden transition-transform duration-700 ease-out group-hover:scale-102">
-              <img 
+              <img
                 ref={el => { roomImageRefs.current[1] = el; }}
-                src="/images/rooms/double room.webp" 
-                alt="Luxury Double Room Accommodation" 
+                src="/images/rooms/double room.webp"
+                alt="Luxury Double Room Accommodation"
                 className="w-full h-full object-cover"
               />
             </div>
-            
+
             {/* Absolute Badges Inside Cinematic Frame */}
             <div className="absolute top-6 left-6 sm:top-8 sm:left-8 z-20 flex items-center gap-3">
-              <span className="bg-black/60 backdrop-blur-md border border-[var(--lords-gold)]/20 text-[var(--lords-gold)] font-label text-[9px] uppercase tracking-[0.25em] px-4 py-2 font-semibold rounded-sm">
+              <span className="bg-black/60 backdrop-blur-md border border-[var(--lords-gold)]/20 text-[#A8C5A0] font-label text-[9px] uppercase tracking-[0.25em] px-4 py-2 font-semibold rounded-sm">
                 02 / STARLIT RETREAT
               </span>
             </div>
-            
+
             <div className="absolute bottom-6 left-6 sm:bottom-8 sm:left-8 z-20 max-w-[420px] hidden sm:block">
-              <span className="font-label text-[9px] uppercase tracking-widest text-[var(--lords-gold)] block mb-1">
+              <span className="font-label text-[9px] uppercase tracking-widest text-[#A8C5A0] block mb-1">
                 EXQUISITE HIGH-ALTITUDE COMFORT
               </span>
-              <h3 className="font-display text-2xl text-[var(--lords-cream)] font-light">
+              <h3 className="font-display text-2xl text-white font-light">
                 Double Room
               </h3>
             </div>
           </div>
 
           {/* STAGGERED THREE-COLUMN EDITORIAL SPREAD */}
-          <div 
+          <div
             ref={el => { roomContentRefs.current[1] = el; }}
             className="grid grid-cols-1 md:grid-cols-[1.1fr_1.3fr_0.9fr] gap-8 md:gap-12 lg:gap-16 items-start"
           >
-            
+
             {/* COLUMN 1: Large Typographic Quote Callout */}
             <div className="relative border-l-2 border-[var(--lords-gold)]/30 pl-6 py-2">
               <span className="font-display text-6xl text-[var(--lords-gold)] opacity-10 absolute -top-8 -left-4 font-serif">
@@ -624,11 +623,11 @@ export default function Rooms() {
               <p className="font-body text-[14.5px] text-[var(--lords-smoke)] leading-[1.9] mb-8 font-light">
                 Elegant comfort paired with stunning mountain vistas. Our Double Room is equipped with premium bespoke furnishings, tea amenities, and a deeply peaceful atmosphere designed for couples or individuals looking to immerse themselves in highland tranquility above the clouds.
               </p>
-              
+
               <div className="flex items-center gap-6 mt-auto">
                 <Link
                   to="/booking?room=double"
-                  className="bg-[var(--lords-gold)] hover:bg-[var(--lords-gold-light)] text-[var(--lords-mist)] font-label text-[11px] uppercase tracking-widest font-semibold px-8 py-4.5 rounded-sm transition-colors shadow-md"
+                  className="bg-[var(--lords-gold)] hover:bg-[var(--lords-gold-light)] text-white hover:text-[var(--lords-cream)] font-label text-[11px] uppercase tracking-widest font-semibold px-8 py-4.5 rounded-sm transition-all shadow-md"
                 >
                   Book This Room
                 </Link>
@@ -646,7 +645,7 @@ export default function Rooms() {
             <div className="glass-panel-light p-6 rounded-xl border border-[var(--lords-gold)]/20 shadow-2xl relative overflow-hidden">
               {/* Subtle background glow */}
               <div className="absolute top-0 right-0 w-24 h-24 bg-[var(--lords-gold)]/5 rounded-full blur-xl" />
-              
+
               <div className="border-b border-[var(--lords-stone)]/40 pb-4 mb-4">
                 <span className="font-label text-[9px] uppercase tracking-widest text-[var(--lords-muted)] block">
                   NIGHTLY RATES FROM
@@ -696,51 +695,51 @@ export default function Rooms() {
       {/* ================================================================
           SECTION 4 — ROOM 3: SMALL DOUBLE ROOM (Architectural Rectangular Viewport & Offset Minimalist Mosaic)
           ================================================================ */}
-      <section 
-        id="room-03" 
+      <section
+        id="room-03"
         className="w-full py-24 md:py-32 px-6 md:px-16 lg:px-20 relative z-10 bg-transparent border-b border-[var(--lords-stone)]/20"
       >
         <div className="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-12 lg:gap-20 items-center">
-          
+
           {/* LEFT SIDE: Architectural Image Frame (Aspect 4/3 to prevent cropping) */}
           <div className="relative w-full max-w-[540px] aspect-[4/3] mx-auto order-1 lg:order-1">
-            
+
             {/* Outline Blueprint Markings (Fine Golden Borders) */}
             <div className="absolute -inset-4 border border-[var(--lords-gold)]/15 rounded-3xl pointer-events-none scale-102" />
             <div className="absolute -top-8 left-6 font-label text-[8px] tracking-[0.4em] text-[var(--lords-muted)]">
               ARCHITECTURAL COMPACT RETREAT
             </div>
-            
+
             {/* The Framed Image */}
             <div className="w-full h-full rounded-2xl overflow-hidden border border-[var(--lords-gold)]/25 shadow-2xl relative group">
               <div className="absolute inset-0 bg-black/25 z-10 transition-colors duration-500 group-hover:bg-black/15" />
               <div className="w-full h-[120%] absolute -top-[10%] left-0 overflow-hidden transition-transform duration-700 ease-out group-hover:scale-103">
-                <img 
+                <img
                   ref={el => { roomImageRefs.current[2] = el; }}
-                  src="/images/rooms/small double room.webp" 
-                  alt="Boutique Small Double Room" 
+                  src="/images/rooms/small double room.webp"
+                  alt="Boutique Small Double Room"
                   className="w-full h-full object-cover"
                 />
               </div>
               {/* Vignette Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none z-15" />
-              
+
               {/* Watermark in image */}
-              <span className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 font-label text-[9px] uppercase tracking-[0.3em] text-[var(--lords-cream)]">
+              <span className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 font-label text-[9px] uppercase tracking-[0.3em] text-white">
                 03 / THE HIGHLAND NEST
               </span>
             </div>
 
             {/* Overlapping coordinates block */}
             <div className="absolute -bottom-4 -left-6 z-25 bg-[var(--lords-moss)] border border-[var(--lords-gold)]/20 px-4 py-2 shadow-lg hidden sm:block">
-              <span className="font-label text-[9px] uppercase tracking-wider text-[var(--lords-gold)]">
+              <span className="font-label text-[9px] uppercase tracking-wider text-white">
                 ELEVATION 1,430M
               </span>
             </div>
           </div>
 
           {/* RIGHT SIDE: Offset Minimalist Content Card Overlay */}
-          <div 
+          <div
             ref={el => { roomContentRefs.current[2] = el; }}
             className="flex flex-col justify-center order-2 lg:order-2 relative"
           >
@@ -781,7 +780,7 @@ export default function Rooms() {
               ].map((pill, idx) => {
                 const IconComponent = pill.icon;
                 return (
-                  <span 
+                  <span
                     key={idx}
                     className="flex items-center gap-1.5 bg-[var(--lords-stone)]/40 text-[var(--lords-cream)] font-label text-[10px] uppercase tracking-wider px-3.5 py-2 border border-[var(--lords-gold)]/10"
                   >
@@ -808,7 +807,7 @@ export default function Rooms() {
               <div className="flex items-center gap-4">
                 <Link
                   to="/booking?room=small-double"
-                  className="bg-[var(--lords-gold)] hover:bg-[var(--lords-gold-light)] text-[var(--lords-mist)] font-label text-[11px] uppercase tracking-widest font-semibold px-8 py-4 rounded-sm transition-colors shadow-md"
+                  className="bg-[var(--lords-gold)] hover:bg-[var(--lords-gold-light)] text-white hover:text-[var(--lords-cream)] font-label text-[11px] uppercase tracking-widest font-semibold px-8 py-4 rounded-sm transition-all shadow-md"
                 >
                   Book Nest
                 </Link>
@@ -829,13 +828,13 @@ export default function Rooms() {
       {/* ================================================================
           SECTION 5 — COMPARISON TABLE
           ================================================================ */}
-      <section 
+      <section
         id="compare-section"
         ref={comparisonRef}
         className="bg-[var(--lords-mist)] py-24 md:py-32 px-6 md:px-16 lg:px-20 relative z-10 border-t border-[var(--lords-stone)]/20"
       >
         <div className="max-w-[1200px] mx-auto w-full">
-          
+
           {/* Header */}
           <div className="text-center mb-16">
             <span className="font-label text-[10px] uppercase tracking-[0.45em] text-[var(--lords-gold)] block mb-3">
@@ -853,7 +852,7 @@ export default function Rooms() {
           <div className="glass-panel overflow-x-auto rounded-xl border border-[var(--lords-stone)]/50 shadow-2xl">
             <table className="w-full min-w-[700px] text-left border-collapse">
               <thead>
-                <tr className="bg-[var(--lords-moss)] text-[var(--lords-cream)] font-label text-[11px] uppercase tracking-[0.2em]">
+                <tr className="bg-[var(--lords-moss)] text-white/95 font-label text-[11px] uppercase tracking-[0.2em]">
                   <th className="py-5 px-6 font-semibold border-b border-[var(--lords-stone)]/40">Feature</th>
                   <th className="py-5 px-6 font-semibold border-b border-[var(--lords-stone)]/40 text-center">Triple Room</th>
                   <th className="py-5 px-6 font-semibold border-b border-[var(--lords-stone)]/40 text-center">Double Room</th>
@@ -861,9 +860,9 @@ export default function Rooms() {
                 </tr>
               </thead>
               <tbody className="font-body text-[14px] text-[var(--lords-smoke)]">
-                
+
                 {/* Floor Size */}
-                <tr className="bg-black/10 hover:bg-black/20 transition-colors">
+                <tr className="bg-white hover:bg-[#f0f4ef] transition-colors">
                   <td className="py-4 px-6 border-b border-[var(--lords-stone)]/20 font-medium text-[var(--lords-cream)]">Floor Size</td>
                   <td className="py-4 px-6 border-b border-[var(--lords-stone)]/20 text-center">32 m²</td>
                   <td className="py-4 px-6 border-b border-[var(--lords-stone)]/20 text-center">28 m²</td>
@@ -871,7 +870,7 @@ export default function Rooms() {
                 </tr>
 
                 {/* Max Guests */}
-                <tr className="bg-black/25 hover:bg-black/35 transition-colors">
+                <tr className="bg-[#eef2ed] hover:bg-[#e5ece4] transition-colors">
                   <td className="py-4 px-6 border-b border-[var(--lords-stone)]/20 font-medium text-[var(--lords-cream)]">Max Guests</td>
                   <td className="py-4 px-6 border-b border-[var(--lords-stone)]/20 text-center">3 Guests</td>
                   <td className="py-4 px-6 border-b border-[var(--lords-stone)]/20 text-center">2 Guests</td>
@@ -879,7 +878,7 @@ export default function Rooms() {
                 </tr>
 
                 {/* Bed Type */}
-                <tr className="bg-black/10 hover:bg-black/20 transition-colors">
+                <tr className="bg-white hover:bg-[#f0f4ef] transition-colors">
                   <td className="py-4 px-6 border-b border-[var(--lords-stone)]/20 font-medium text-[var(--lords-cream)]">Bed Type</td>
                   <td className="py-4 px-6 border-b border-[var(--lords-stone)]/20 text-center flex items-center justify-center gap-1.5 mt-0.5">
                     <BedDouble size={14} className="text-[var(--lords-gold)]" /> King size
@@ -893,7 +892,7 @@ export default function Rooms() {
                 </tr>
 
                 {/* Mountain View */}
-                <tr className="bg-black/25 hover:bg-black/35 transition-colors">
+                <tr className="bg-[#eef2ed] hover:bg-[#e5ece4] transition-colors">
                   <td className="py-4 px-6 border-b border-[var(--lords-stone)]/20 font-medium text-[var(--lords-cream)]">Mountain View</td>
                   <td className="py-4 px-6 border-b border-[var(--lords-stone)]/20 text-center">
                     <Check size={16} className="text-[var(--lords-gold)] mx-auto" />
@@ -907,7 +906,7 @@ export default function Rooms() {
                 </tr>
 
                 {/* Hot Water */}
-                <tr className="bg-black/10 hover:bg-black/20 transition-colors">
+                <tr className="bg-white hover:bg-[#f0f4ef] transition-colors">
                   <td className="py-4 px-6 border-b border-[var(--lords-stone)]/20 font-medium text-[var(--lords-cream)]">Hot Water</td>
                   <td className="py-4 px-6 border-b border-[var(--lords-stone)]/20 text-center">
                     <Check size={16} className="text-[var(--lords-gold)] mx-auto" />
@@ -921,7 +920,7 @@ export default function Rooms() {
                 </tr>
 
                 {/* WiFi */}
-                <tr className="bg-black/25 hover:bg-black/35 transition-colors">
+                <tr className="bg-[#eef2ed] hover:bg-[#e5ece4] transition-colors">
                   <td className="py-4 px-6 border-b border-[var(--lords-stone)]/20 font-medium text-[var(--lords-cream)]">Free WiFi</td>
                   <td className="py-4 px-6 border-b border-[var(--lords-stone)]/20 text-center">
                     <Check size={16} className="text-[var(--lords-gold)] mx-auto" />
@@ -935,7 +934,7 @@ export default function Rooms() {
                 </tr>
 
                 {/* Smart TV */}
-                <tr className="bg-black/10 hover:bg-black/20 transition-colors">
+                <tr className="bg-white hover:bg-[#f0f4ef] transition-colors">
                   <td className="py-4 px-6 border-b border-[var(--lords-stone)]/20 font-medium text-[var(--lords-cream)]">Smart TV</td>
                   <td className="py-4 px-6 border-b border-[var(--lords-stone)]/20 text-center">
                     <Check size={16} className="text-[var(--lords-gold)] mx-auto" />
@@ -949,7 +948,7 @@ export default function Rooms() {
                 </tr>
 
                 {/* Private Bath */}
-                <tr className="bg-black/25 hover:bg-black/35 transition-colors">
+                <tr className="bg-[#eef2ed] hover:bg-[#e5ece4] transition-colors">
                   <td className="py-4 px-6 border-b border-[var(--lords-stone)]/20 font-medium text-[var(--lords-cream)]">Private Bath</td>
                   <td className="py-4 px-6 border-b border-[var(--lords-stone)]/20 text-center">
                     <Check size={16} className="text-[var(--lords-gold)] mx-auto" />
@@ -963,7 +962,7 @@ export default function Rooms() {
                 </tr>
 
                 {/* Tea Service */}
-                <tr className="bg-black/10 hover:bg-black/20 transition-colors">
+                <tr className="bg-white hover:bg-[#f0f4ef] transition-colors">
                   <td className="py-4 px-6 border-b border-[var(--lords-stone)]/20 font-medium text-[var(--lords-cream)]">Tea Service</td>
                   <td className="py-4 px-6 border-b border-[var(--lords-stone)]/20 text-center">
                     <Check size={16} className="text-[var(--lords-gold)] mx-auto" />
@@ -994,10 +993,10 @@ export default function Rooms() {
       {/* ================================================================
           SECTION 6 — ROOM CTA
           ================================================================ */}
-      <section 
+      <section
         className="relative py-28 px-6 md:px-16 lg:px-20 text-center border-t border-[var(--lords-stone)]/20 overflow-hidden"
         style={{
-          background: 'linear-gradient(to bottom, var(--lords-fog) 0%, var(--lords-forest) 100%)',
+          background: 'linear-gradient(to bottom, #F0F4EF 0%, #DCE8DA 100%)',
         }}
       >
         {/* Background glow overlay */}
@@ -1015,7 +1014,7 @@ export default function Rooms() {
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
             <Link
               to="/booking"
-              className="bg-[var(--lords-gold)] hover:bg-[var(--lords-gold-light)] text-[var(--lords-mist)] font-label text-[12px] uppercase tracking-widest font-semibold px-12 py-[18px] transition-colors rounded-sm shadow-lg min-w-[200px]"
+              className="bg-[var(--lords-gold)] hover:bg-[var(--lords-gold-light)] text-white hover:text-[var(--lords-cream)] font-label text-[12px] uppercase tracking-widest font-semibold px-12 py-[18px] transition-all rounded-sm shadow-lg min-w-[200px]"
             >
               Book Your Room
             </Link>

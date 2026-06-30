@@ -1,24 +1,24 @@
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ChevronDown, 
-  ArrowLeft, 
-  ArrowRight, 
-  Plus, 
-  Minus, 
-  Check 
+import {
+  ChevronDown,
+  ArrowLeft,
+  ArrowRight,
+  Plus,
+  Minus,
+  Check
 } from 'lucide-react';
 
 function WhatsAppIcon({ size = 16, className = "" }: { size?: number; className?: string }) {
   return (
-    <svg 
-      width={size} 
-      height={size} 
-      viewBox="0 0 16 16" 
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 16 16"
       fill="currentColor"
       className={className}
     >
-      <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+      <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
     </svg>
   );
 }
@@ -115,8 +115,16 @@ export default function BookingForm({
   countries
 }: BookingFormProps) {
   return (
-    <div 
-      className="w-full bg-[rgba(9,18,13,0.8)] backdrop-blur-md rounded-xl border-t-[3px] border-t-[var(--lords-moss)] border-x border-b border-[var(--lords-stone)]/40 p-6 md:p-12 shadow-[0_12px_48px_rgba(0,0,0,0.5)] relative overflow-hidden"
+    <div
+      className="w-full p-6 md:p-12 relative overflow-hidden"
+      style={{
+        background: 'rgba(240, 244, 239, 0.35)',
+        backdropFilter: 'blur(14px)',
+        WebkitBackdropFilter: 'blur(14px)',
+        border: '1px solid rgba(168, 197, 160, 0.45)',
+        borderRadius: '16px',
+        boxShadow: '0 4px 24px rgba(74, 103, 65, 0.12)',
+      }}
     >
       {/* Decorative Blur */}
       <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--lords-gold)]/5 rounded-full blur-2xl pointer-events-none" />
@@ -125,17 +133,16 @@ export default function BookingForm({
       {step <= 3 && (
         <div className="mb-12 relative">
           <div className="flex justify-between items-center w-full max-w-[480px] mx-auto relative z-10">
-            
+
             {/* Step 1 Node */}
             <div className="flex flex-col items-center">
-              <div 
-                className={`w-8 h-8 flex items-center justify-center font-label text-xs font-semibold transition-all duration-300 border-2 rounded-none ${
-                  step > 1 
-                    ? 'bg-[var(--lords-moss)] border-[var(--lords-moss)] text-white' 
-                    : step === 1 
-                      ? 'border-[var(--lords-gold)] text-[var(--lords-gold)] bg-[var(--lords-stone)]' 
-                      : 'border-[var(--lords-stone)] text-[var(--lords-muted)] bg-[var(--lords-fog)]'
-                }`}
+              <div
+                className={`w-8 h-8 flex items-center justify-center font-label text-xs font-semibold transition-all duration-300 border-2 rounded-none ${step > 1
+                  ? 'bg-[var(--lords-moss)] border-[var(--lords-moss)] text-white'
+                  : step === 1
+                    ? 'border-[var(--lords-gold)] text-[var(--lords-gold)] bg-[var(--lords-stone)]'
+                    : 'border-[var(--lords-stone)] text-[var(--lords-muted)] bg-[var(--lords-fog)]'
+                  }`}
               >
                 {step > 1 ? <Check size={14} strokeWidth={3} /> : '1'}
               </div>
@@ -146,7 +153,7 @@ export default function BookingForm({
 
             {/* Connector 1 */}
             <div className="flex-grow h-[2px] mx-4 bg-[var(--lords-stone)] relative overflow-hidden -mt-6">
-              <div 
+              <div
                 className="absolute inset-y-0 left-0 bg-[var(--lords-moss)] transition-all duration-300"
                 style={{ width: step > 1 ? '100%' : '0%' }}
               />
@@ -154,14 +161,13 @@ export default function BookingForm({
 
             {/* Step 2 Node */}
             <div className="flex flex-col items-center">
-              <div 
-                className={`w-8 h-8 flex items-center justify-center font-label text-xs font-semibold transition-all duration-300 border-2 rounded-none ${
-                  step > 2 
-                    ? 'bg-[var(--lords-moss)] border-[var(--lords-moss)] text-white' 
-                    : step === 2 
-                      ? 'border-[var(--lords-gold)] text-[var(--lords-gold)] bg-[var(--lords-stone)]' 
-                      : 'border-[var(--lords-stone)] text-[var(--lords-muted)] bg-[var(--lords-fog)]'
-                }`}
+              <div
+                className={`w-8 h-8 flex items-center justify-center font-label text-xs font-semibold transition-all duration-300 border-2 rounded-none ${step > 2
+                  ? 'bg-[var(--lords-moss)] border-[var(--lords-moss)] text-white'
+                  : step === 2
+                    ? 'border-[var(--lords-gold)] text-[var(--lords-gold)] bg-[var(--lords-stone)]'
+                    : 'border-[var(--lords-stone)] text-[var(--lords-muted)] bg-[var(--lords-fog)]'
+                  }`}
               >
                 {step > 2 ? <Check size={14} strokeWidth={3} /> : '2'}
               </div>
@@ -172,7 +178,7 @@ export default function BookingForm({
 
             {/* Connector 2 */}
             <div className="flex-grow h-[2px] mx-4 bg-[var(--lords-stone)] relative overflow-hidden -mt-6">
-              <div 
+              <div
                 className="absolute inset-y-0 left-0 bg-[var(--lords-moss)] transition-all duration-300"
                 style={{ width: step > 2 ? '100%' : '0%' }}
               />
@@ -180,12 +186,11 @@ export default function BookingForm({
 
             {/* Step 3 Node */}
             <div className="flex flex-col items-center">
-              <div 
-                className={`w-8 h-8 flex items-center justify-center font-label text-xs font-semibold transition-all duration-300 border-2 rounded-none ${
-                  step === 3 
-                    ? 'border-[var(--lords-gold)] text-[var(--lords-gold)] bg-[var(--lords-stone)]' 
-                    : 'border-[var(--lords-stone)] text-[var(--lords-muted)] bg-[var(--lords-fog)]'
-                }`}
+              <div
+                className={`w-8 h-8 flex items-center justify-center font-label text-xs font-semibold transition-all duration-300 border-2 rounded-none ${step === 3
+                  ? 'border-[var(--lords-gold)] text-[var(--lords-gold)] bg-[var(--lords-stone)]'
+                  : 'border-[var(--lords-stone)] text-[var(--lords-muted)] bg-[var(--lords-fog)]'
+                  }`}
               >
                 3
               </div>
@@ -200,7 +205,7 @@ export default function BookingForm({
 
       {/* FORM WINDOW */}
       <AnimatePresence mode="wait">
-        
+
         {/* STEP 1: DATES & ROOM SELECTION */}
         {step === 1 && (
           <motion.div
@@ -217,17 +222,17 @@ export default function BookingForm({
             </div>
 
             <div className="flex flex-col gap-6">
-              
+
               {/* Date pickers row */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                
+
                 {/* Check-In */}
                 <div className="flex flex-col">
                   <label className="font-label text-[10px] uppercase tracking-wider text-[var(--lords-muted)] mb-2">
                     Check-in Date
                   </label>
                   <div className="relative">
-                    <input 
+                    <input
                       type="date"
                       value={checkIn}
                       onChange={(e) => setCheckIn(e.target.value)}
@@ -243,7 +248,7 @@ export default function BookingForm({
                     Check-out Date
                   </label>
                   <div className="relative">
-                    <input 
+                    <input
                       type="date"
                       value={checkOut}
                       onChange={(e) => setCheckOut(e.target.value)}
@@ -270,7 +275,7 @@ export default function BookingForm({
 
               {/* Guest Count Steppers */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">
-                
+
                 {/* Adults Stepper */}
                 <div className="flex flex-col">
                   <span className="font-label text-[10px] uppercase tracking-wider text-[var(--lords-muted)] mb-2.5">
@@ -373,7 +378,7 @@ export default function BookingForm({
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <div 
+                    <div
                       className="bg-[rgba(197,168,128,0.05)] border border-[rgba(197,168,128,0.18)] p-5 mt-4 rounded-sm"
                     >
                       <span className="font-label text-[9px] uppercase tracking-widest text-[var(--lords-gold)] block mb-3">
@@ -432,13 +437,13 @@ export default function BookingForm({
             </div>
 
             <div className="flex flex-col gap-5">
-              
+
               {/* Full Name */}
               <div className="flex flex-col">
                 <label className="font-label text-[10px] uppercase tracking-wider text-[var(--lords-muted)] mb-2">
                   Full Name *
                 </label>
-                <input 
+                <input
                   type="text"
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
@@ -453,7 +458,7 @@ export default function BookingForm({
                 <label className="font-label text-[10px] uppercase tracking-wider text-[var(--lords-muted)] mb-2">
                   Email Address *
                 </label>
-                <input 
+                <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -465,13 +470,13 @@ export default function BookingForm({
 
               {/* Phone & Country Row */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                
+
                 {/* Phone */}
                 <div className="flex flex-col">
                   <label className="font-label text-[10px] uppercase tracking-wider text-[var(--lords-muted)] mb-2">
                     Phone Number
                   </label>
-                  <input 
+                  <input
                     type="tel"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
@@ -528,7 +533,7 @@ export default function BookingForm({
                 >
                   <ArrowLeft size={13} /> Back
                 </button>
-                
+
                 <button
                   type="button"
                   onClick={() => setStep(3)}
@@ -559,10 +564,10 @@ export default function BookingForm({
             </div>
 
             <form onSubmit={handleBookingSubmit} className="flex flex-col gap-6">
-              
+
               {/* Summary box */}
               <div className="bg-[var(--lords-fog)] border border-[var(--lords-stone)] p-6 rounded-sm flex flex-col gap-4">
-                
+
                 <h3 className="font-serif text-lg text-[var(--lords-cream)] border-b border-[var(--lords-stone)]/50 pb-2 mb-2 font-light">
                   Reservation Summary
                 </h3>
@@ -696,11 +701,11 @@ export default function BookingForm({
             <span className="font-label text-[10px] uppercase tracking-[0.3em] text-[var(--lords-gold)] mb-3 block font-semibold">
               RESERVATION REQUESTED
             </span>
-            
+
             <h2 className="font-display text-[var(--lords-cream)] text-3xl font-light mb-4 leading-snug">
               Booking Request Received!
             </h2>
-            
+
             <p className="font-body text-sm text-[var(--lords-smoke)] max-w-[420px] leading-relaxed mb-6">
               Thank you, <span className="text-[var(--lords-cream)] font-medium">{fullName}</span>. We've received your request for the <span className="text-[var(--lords-cream)] font-medium">{selectedRoom.name}</span>. We will review availability and contact you within 24 hours.
             </p>
@@ -720,7 +725,7 @@ export default function BookingForm({
               >
                 <WhatsAppIcon size={16} /> WhatsApp Us
               </a>
-              
+
               <Link
                 to="/"
                 className="flex-grow flex items-center justify-center border border-[var(--lords-stone)] hover:border-[var(--lords-gold)] text-[var(--lords-cream)] hover:text-[var(--lords-gold)] font-label text-xs uppercase tracking-wider py-4 px-6 rounded-sm transition-all cursor-pointer font-semibold"

@@ -41,17 +41,17 @@ export default function HomeHero() {
     >
       {/* BACKGROUND IMAGE (CONVERTED FROM VIDEO TO WEBP) */}
       <div className="absolute inset-0 z-0">
-        <video 
-            autoPlay
-            muted
-            loop
-            playsInline   
-            src="/videos/back.webm" 
-            
-            className="w-full h-full object-cover"
-          />
-        {/* DARK OVERLAY FOR LUXURY VIBE */}
-        <div className="absolute inset-0 bg-black/60" />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          src="/videos/back.webm"
+
+          className="w-full h-full object-cover"
+        />
+        {/* Dark overlay for text readability over video */}
+        <div className="absolute inset-0 bg-black/30 bg-gradient-to-t from-black/60 via-black/25 to-black/15" />
       </div>
 
       {/* MAIN CONTENT - LEFT ALIGNED LIKE IMAGE */}
@@ -61,22 +61,22 @@ export default function HomeHero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 1 }}
-            className="font-label text-[12px] uppercase tracking-[0.5em] text-[var(--lords-gold)] mb-6 block"
+            className="font-label text-[12px] uppercase tracking-[0.5em] text-[#A8C5A0] mb-6 block"
           >
             HAPUTALE · SRI LANKA
           </motion.span>
-
-          <h1 className="font-display font-light text-[clamp(44px,7vw,80px)] text-[var(--lords-cream)] leading-[1.1] mb-8 tracking-tight">
+ 
+          <h1 className="font-display font-light text-[clamp(44px,7vw,80px)] text-white leading-[1.1] mb-8 tracking-tight">
             <span ref={el => { textRefs.current[0] = el; }} className="block">Elegance</span>
-            <span ref={el => { textRefs.current[1] = el; }} className="block">above the <span className="font-serif italic text-[var(--lords-gold)]">hills.</span></span>
+            <span ref={el => { textRefs.current[1] = el; }} className="block">above the <span className="font-serif italic text-[#A8C5A0]">hills.</span></span>
           </h1>
-
-          <p ref={el => { textRefs.current[2] = el; }} className="font-body text-[16px] md:text-[18px] text-[var(--lords-smoke)] leading-[1.8] max-w-[500px]">
+ 
+          <p ref={el => { textRefs.current[2] = el; }} className="font-body text-[16px] md:text-[18px] text-white/80 leading-[1.8] max-w-[500px]">
             A sanctuary where misty mountains meet modern elegance. Haputale's finest boutique experience.
           </p>
         </div>
       </div>
-
+ 
       {/* FLOATING PILL STATS BAR */}
       <motion.div
         initial={{ y: 50, opacity: 0 }}
@@ -84,25 +84,25 @@ export default function HomeHero() {
         transition={{ delay: 0.8, duration: 1, ease: "easeOut" }}
         className="absolute bottom-12 left-6 right-6 md:left-1/2 md:-translate-x-1/2 md:right-auto z-20"
       >
-        <div className="glass-panel px-8 md:px-16 py-6 md:py-8 rounded-[32px] flex flex-row items-center justify-between md:justify-center gap-8 md:gap-24 shadow-2xl border border-[var(--lords-gold)]/10">
+        <div className="dark-glass-panel px-8 md:px-16 py-6 md:py-8 rounded-[32px] flex flex-row items-center justify-between md:justify-center gap-8 md:gap-24">
 
           <div className="flex flex-col items-center md:items-start">
-            <span ref={guestsRef} className="font-display font-light text-3xl md:text-4xl text-[var(--lords-gold)]">0+</span>
-            <span className="font-label text-[10px] md:text-[11px] uppercase tracking-widest text-[var(--lords-smoke)] mt-1 md:mt-2">Happy Guests</span>
+            <span ref={guestsRef} className="font-display font-light text-3xl md:text-4xl text-[#A8C5A0]">0+</span>
+            <span className="font-label text-[10px] md:text-[11px] uppercase tracking-widest text-white/70 mt-1 md:mt-2">Happy Guests</span>
           </div>
 
-          <div className="hidden md:block w-px h-12 bg-[var(--lords-stone)]"></div>
+          <div className="hidden md:block w-px h-12 bg-white/10"></div>
 
           <div className="flex flex-col items-center md:items-start">
-            <span ref={roomsRef} className="font-display font-light text-3xl md:text-4xl text-[var(--lords-gold)]">0</span>
-            <span className="font-label text-[10px] md:text-[11px] uppercase tracking-widest text-[var(--lords-smoke)] mt-1 md:mt-2">Room Types</span>
+            <span ref={roomsRef} className="font-display font-light text-3xl md:text-4xl text-[#A8C5A0]">0</span>
+            <span className="font-label text-[10px] md:text-[11px] uppercase tracking-widest text-white/70 mt-1 md:mt-2">Room Types</span>
           </div>
 
-          <div className="hidden md:block w-px h-12 bg-[var(--lords-stone)]"></div>
+          <div className="hidden md:block w-px h-12 bg-white/10"></div>
 
           <div className="flex flex-col items-center md:items-start">
-            <span ref={satisfactionRef} className="font-display font-light text-3xl md:text-4xl text-[var(--lords-gold)]">0%</span>
-            <span className="font-label text-[10px] md:text-[11px] uppercase tracking-widest text-[var(--lords-smoke)] mt-1 md:mt-2">Satisfaction</span>
+            <span ref={satisfactionRef} className="font-display font-light text-3xl md:text-4xl text-[#A8C5A0]">0%</span>
+            <span className="font-label text-[10px] md:text-[11px] uppercase tracking-widest text-white/70 mt-1 md:mt-2">Satisfaction</span>
           </div>
 
         </div>

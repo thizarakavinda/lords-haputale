@@ -74,12 +74,12 @@ export default function AboutStory() {
   }, []);
 
   return (
-    <section 
+    <section
       ref={storySectionRef}
       className="bg-[var(--lords-fog)]/80 backdrop-blur-md py-24 md:py-32 relative z-10 border-y border-[var(--lords-stone)]/20"
     >
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-[28%_42%_30%] gap-12 lg:gap-8 items-start">
-        
+
         {/* COL 1 - Sticky Sidebar */}
         <div ref={storyCol1Ref} className="lg:sticky lg:top-32 self-start flex flex-col gap-4 px-2 lg:px-6">
           <span className="font-label text-[10px] uppercase tracking-[0.4em] text-[var(--lords-gold)]">
@@ -107,7 +107,7 @@ export default function AboutStory() {
           <p className="font-body text-[16px] text-[var(--lords-smoke)] leading-[1.95] font-light">
             At Lord's, the experience is shaped by the land. Awake to misty mountains unfolding outside your window, witness golden sunrises painting the tea estates, and immerse yourself in the highland culture that makes Haputale a unique escape.
           </p>
-          
+
           {/* Pull Quote */}
           <div className="border-l-2 border-[var(--lords-gold)] pl-6 py-2 my-6">
             <blockquote className="font-quote italic text-xl text-[var(--lords-cream)] leading-relaxed">
@@ -119,25 +119,25 @@ export default function AboutStory() {
         {/* COL 3 - Image & Stat Card */}
         <div ref={storyCol3Ref} className="flex flex-col gap-8 px-2 lg:px-6">
           <div className="w-full aspect-[2/3] overflow-hidden rounded-md border border-[var(--lords-stone)]/40 shadow-xl">
-            <img 
-              src="/images/about/lords-story-portrait.webp" 
-              alt="Boutique tea estate views" 
+            <img
+              src="/images/about/lords-story-portrait.webp"
+              alt="Boutique tea estate views"
               className="w-full h-full object-cover hover:scale-103 transition-transform duration-700"
             />
           </div>
-          
+
           {/* Floating Stat Card */}
           <div className="bg-[var(--lords-moss)] p-8 rounded-xl border border-[var(--lords-gold)]/10 shadow-lg relative overflow-hidden group">
             {/* Background glowing circle */}
             <div className="absolute -right-8 -bottom-8 w-24 h-24 bg-[var(--lords-gold)]/5 rounded-full blur-2xl group-hover:scale-120 transition-transform duration-500" />
-            
-            <span 
-              ref={statsRef} 
+
+            <span
+              ref={statsRef}
               className="font-display text-5xl text-[var(--lords-gold-light)] block font-light leading-none mb-2"
             >
               0+
             </span>
-            <span className="font-label text-xs uppercase tracking-widest text-[var(--lords-smoke)]">
+            <span className="font-label text-xs uppercase tracking-widest text-white/90">
               Happy guests and counting
             </span>
           </div>

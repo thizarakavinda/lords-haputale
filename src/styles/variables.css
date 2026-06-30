@@ -1,37 +1,50 @@
 :root {
-  /* Color Variables — Forest Green · Mist White · Warm Beige · Gold Accent */
+  /* Color Variables — Misty Light Theme */
   --lords-white: #FFFFFF;
 
-  /* ── Backgrounds (kept dark so the Galaxy canvas shines through) ── */
-  --lords-mist:   #050a07;   /* Deepest bg — matches Galaxy canvas fill exactly */
-  --lords-fog:    #0d1a11;   /* Dark forest card/section surface */
-  --lords-stone:  #1a3023;   /* Borders and raised glass panels */
+  /* ── Backgrounds (light, airy misty palette) ── */
+  --lords-mist: #FFFFFF;
+  /* Deepest bg — matches Galaxy canvas fill exactly */
+  --lords-fog: #F0F4EF;
+  /* Very light sage card/section surface */
+  --lords-stone: rgba(168, 197, 160, 0.45);
+  /* Borders and raised glass panels (soft misty green) */
 
-  /* ── Forest Greens ── */
-  --lords-bark:   #5a7a62;   /* Mid-tone forest sage for subtle accents */
-  --lords-moss:   #2e7d50;   /* Vibrant forest green — CTAs, highlights, buttons */
-  --lords-forest: #1a4a2e;   /* Deep forest shadow used for dark overlays */
-  --lords-earth:  #060e0a;   /* Near-black undergrowth for deepest shadows */
+  /* ── Forest Greens / Accents ── */
+  --lords-bark: #6E8866;
+  /* Mid-tone forest sage for subtle accents */
+  --lords-moss: #4A6741;
+  /* Muted forest green — CTAs, highlights, buttons */
+  --lords-forest: #2D3F27;
+  /* Deep muted forest green */
+  --lords-earth: #F0F4EF;
+  /* Undergrowth/deepest shadows mapped to light sage */
 
-  /* ── Gold Accent (luxury signature) ── */
-  --lords-gold:       #c5a880;   /* Warm champagne gold */
-  --lords-gold-light: #e6d5bf;   /* Soft cream gold for hover/light states */
+  /* ── Highlights & Accents ── */
+  --lords-gold: #4A6741;
+  /* Muted forest green accent */
+  --lords-gold-light: #A8C5A0;
+  /* Soft misty green for hover/light states */
 
-  /* ── Text ── */
-  --lords-cream:    #f0f5f2;   /* Mist White — primary headings and titles */
-  --lords-charcoal: #dce8e0;   /* Mist White soft — main body text */
-  --lords-smoke:    #c4b49a;   /* Warm Beige — secondary text and descriptions */
-  --lords-muted:    #8a9070;   /* Warm sage — labels, captions, muted borders */
+  /* ── Text (highly readable dark green-black) ── */
+  --lords-cream: #1E2D1A;
+  /* Primary headings and titles */
+  --lords-charcoal: #1E2D1A;
+  /* Main body text */
+  --lords-smoke: #354F2E;
+  /* Secondary text and descriptions */
+  --lords-muted: #48623F;
+  /* Labels, captions, muted borders */
 
   /* ── Font Families ── */
   --font-display: 'Bodoni Moda', serif;
-  --font-serif:   'Cormorant Garamond', serif;
-  --font-body:    'DM Sans', sans-serif;
-  --font-label:   'Jost', sans-serif;
-  --font-quote:   'Playfair Display', serif;
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-label: 'Jost', sans-serif;
+  --font-quote: 'Playfair Display', serif;
 
   /* ── Text Sizes — Dynamic ── */
   --text-display: clamp(48px, 8vw, 88px);
-  --text-h1:      clamp(36px, 5vw, 64px);
-  --text-h2:      clamp(28px, 4vw, 48px);
+  --text-h1: clamp(36px, 5vw, 64px);
+  --text-h2: clamp(28px, 4vw, 48px);
 }

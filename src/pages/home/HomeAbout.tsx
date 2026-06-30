@@ -42,19 +42,19 @@ export default function HomeAbout() {
   ];
 
   return (
-    <section 
+    <section
       ref={sectionRef}
       className="glass-panel py-20 md:py-28 px-6 md:px-16 relative z-10 mx-4 md:mx-12 my-16 rounded-[32px] border border-[var(--lords-stone)]"
     >
       <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-        
+
         {/* LEFT COLUMN - MAIN CONTENT & DETAILS (7 Columns) */}
         <div ref={leftColRef} className="lg:col-span-7 flex flex-col justify-center">
           <div className="relative">
             <span className="absolute top-[-50px] left-0 font-display text-[120px] md:text-[200px] leading-none text-[var(--lords-gold)] opacity-[0.03] select-none -z-10">
               01
             </span>
-            
+
             <span className="font-label text-[11px] uppercase tracking-[0.4em] text-[var(--lords-gold)] block mb-4">
               WHO WE ARE
             </span>
@@ -71,11 +71,11 @@ export default function HomeAbout() {
           {/* HIGHLIGHTS SECTION - Fills empty space with premium cards */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10 max-w-[680px]">
             {features.map((feature, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className="flex flex-col p-5 rounded-xl border border-[var(--lords-stone)]/40 backdrop-blur-sm"
                 style={{
-                  background: 'rgba(5, 10, 7, 0.25)',
+                  background: 'rgba(240, 244, 239, 0.6)',
                 }}
               >
                 <div className="mb-3 p-2 bg-[var(--lords-moss)]/30 rounded-lg w-fit">
@@ -92,7 +92,7 @@ export default function HomeAbout() {
           </div>
 
           <div>
-            <Link 
+            <Link
               to="/about"
               className="inline-flex items-center gap-2 font-label text-xs uppercase text-[var(--lords-gold)] hover:text-[var(--lords-gold-light)] group border-b border-[var(--lords-gold)]/30 hover:border-[var(--lords-gold-light)] pb-1 transition-all"
             >
@@ -103,7 +103,7 @@ export default function HomeAbout() {
 
         {/* RIGHT COLUMN - IMAGE STACK (5 Columns) */}
         <div ref={rightColRef} className="lg:col-span-5 relative pl-4 lg:pl-8">
-          
+
           {/* Main Large Image */}
           <div className="relative z-10 w-full aspect-[4/5] shadow-[0_20px_40px_rgba(0,0,0,0.6)] overflow-hidden rounded-2xl border border-[var(--lords-stone)]">
             <img src="/images/hero.webp" alt="Lord's Haputale lobby" className="w-full h-full object-cover" />

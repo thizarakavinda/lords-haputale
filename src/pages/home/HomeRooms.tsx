@@ -39,10 +39,7 @@ export default function HomeRooms() {
   return (
     <section
       ref={sectionRef}
-      className="py-24 md:py-[120px] px-6 md:px-20 relative z-10"
-      style={{
-        background: 'rgba(5, 10, 7, 0.4)',
-      }}
+      className="py-24 md:py-[120px] px-6 md:px-20 relative z-10 bg-transparent"
     >
       <div className="max-w-[1440px] mx-auto w-full">
 
@@ -65,14 +62,14 @@ export default function HomeRooms() {
             <button
               ref={prevRef}
               className="w-12 h-12 flex items-center justify-center text-[var(--lords-gold)] transition-all duration-300 hover:bg-[var(--lords-gold)] hover:text-[var(--lords-mist)]"
-              style={{ border: '1px solid rgba(197,168,128,0.4)', borderRadius: '2px' }}
+              style={{ border: '1px solid rgba(74, 103, 65, 0.4)', borderRadius: '2px' }}
             >
               <ArrowLeft size={18} />
             </button>
             <button
               ref={nextRef}
               className="w-12 h-12 flex items-center justify-center text-[var(--lords-gold)] transition-all duration-300 hover:bg-[var(--lords-gold)] hover:text-[var(--lords-mist)]"
-              style={{ border: '1px solid rgba(197,168,128,0.4)', borderRadius: '2px' }}
+              style={{ border: '1px solid rgba(74, 103, 65, 0.4)', borderRadius: '2px' }}
             >
               <ArrowRight size={18} />
             </button>
@@ -109,22 +106,25 @@ export default function HomeRooms() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-80px' }}
                 transition={{ duration: 0.65, delay: index * 0.12 }}
-                className="group cursor-pointer h-[590px] flex flex-col rounded-xl overflow-hidden relative"
+                className="group cursor-pointer h-[590px] flex flex-col overflow-hidden relative"
                 style={{
-                  background: 'rgba(9, 18, 13, 0.25)',
-                  border: '1px solid rgba(197,168,128,0.15)',
-                  boxShadow: '0 20px 48px rgba(0,0,0,0.4)',
+                  background: 'rgba(240, 244, 239, 0.35)',
+                  backdropFilter: 'blur(14px)',
+                  WebkitBackdropFilter: 'blur(14px)',
+                  border: '1px solid rgba(168, 197, 160, 0.45)',
+                  borderRadius: '16px',
+                  boxShadow: '0 4px 24px rgba(74, 103, 65, 0.12)',
                   transition: 'border-color 0.4s, box-shadow 0.4s, background-color 0.4s',
                 }}
                 onMouseEnter={e => {
-                  (e.currentTarget as HTMLElement).style.borderColor = 'rgba(197,168,128,0.4)';
-                  (e.currentTarget as HTMLElement).style.backgroundColor = 'rgba(17, 32, 23, 0.35)';
-                  (e.currentTarget as HTMLElement).style.boxShadow = '0 30px 64px rgba(0,0,0,0.55), 0 0 30px rgba(197,168,128,0.04)';
+                  (e.currentTarget as HTMLElement).style.borderColor = 'rgba(168, 197, 160, 0.65)';
+                  (e.currentTarget as HTMLElement).style.backgroundColor = 'rgba(240, 244, 239, 0.55)';
+                  (e.currentTarget as HTMLElement).style.boxShadow = '0 8px 32px rgba(74, 103, 65, 0.18)';
                 }}
                 onMouseLeave={e => {
-                  (e.currentTarget as HTMLElement).style.borderColor = 'rgba(197,168,128,0.15)';
-                  (e.currentTarget as HTMLElement).style.backgroundColor = 'rgba(9, 18, 13, 0.25)';
-                  (e.currentTarget as HTMLElement).style.boxShadow = '0 20px 48px rgba(0,0,0,0.4)';
+                  (e.currentTarget as HTMLElement).style.borderColor = 'rgba(168, 197, 160, 0.45)';
+                  (e.currentTarget as HTMLElement).style.backgroundColor = 'rgba(240, 244, 239, 0.35)';
+                  (e.currentTarget as HTMLElement).style.boxShadow = '0 4px 24px rgba(74, 103, 65, 0.12)';
                 }}
               >
                 {/* Gold trim offset architectural frame */}
@@ -142,14 +142,14 @@ export default function HomeRooms() {
                   {/* Gradient fade to card body */}
                   <div
                     className="absolute bottom-0 left-0 right-0 h-28"
-                    style={{ background: 'linear-gradient(to bottom, transparent, rgba(9, 18, 13, 0.95))' }}
+                    style={{ background: 'linear-gradient(to bottom, transparent, rgba(240, 244, 239, 0.7))' }}
                   />
 
                   {/* Category badge */}
                   <div className="absolute top-4 left-4 z-20">
                     <span
                       className="font-label text-[9px] uppercase tracking-[0.35em] text-[var(--lords-gold)] px-3 py-1"
-                      style={{ background: 'rgba(4,8,6,0.85)', border: '1px solid rgba(197,168,128,0.3)' }}
+                      style={{ background: 'rgba(240, 244, 239, 0.85)', border: '1px solid rgba(168, 197, 160, 0.45)' }}
                     >
                       {room.category}
                     </span>
@@ -157,7 +157,7 @@ export default function HomeRooms() {
 
                   {/* Circular price badge floating top-right */}
                   <div className="absolute top-4 right-4 z-20 flex flex-col items-center justify-center w-20 h-20 rounded-full border border-[var(--lords-gold)]/30 backdrop-blur-md shadow-lg"
-                    style={{ background: 'rgba(5,10,7,0.75)' }}
+                    style={{ background: 'rgba(240, 244, 239, 0.85)' }}
                   >
                     <span className="font-body text-[9px] uppercase tracking-wider text-[var(--lords-smoke)]">From</span>
                     <span className="font-display text-[20px] text-[var(--lords-gold)] font-medium leading-none">${room.price}</span>

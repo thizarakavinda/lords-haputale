@@ -39,18 +39,18 @@ export default function HomeExperience() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'linear-gradient(to right, rgba(26,26,26,0.7) 0%, rgba(26,26,26,0) 60%)'
+          background: 'linear-gradient(to right, rgba(240, 244, 239, 0.85) 0%, rgba(240, 244, 239, 0) 70%)'
         }}
       />
 
       {/* CONTENT LEFT */}
       <div className="absolute top-1/2 -translate-y-1/2 left-6 md:left-20 z-10 max-w-[600px]">
-        <h2 className="font-display italic text-[clamp(40px,5vw,72px)] text-white leading-[1.1] font-normal">
+        <h2 className="font-display italic text-[clamp(40px,5vw,72px)] text-[var(--lords-cream)] leading-[1.1] font-normal">
           <span className="block">A sacred journey</span>
           <span className="block">above the clouds.</span>
         </h2>
 
-        <p className="font-body text-[15px] text-white/75 mt-5">
+        <p className="font-body text-[15px] text-[var(--lords-smoke)] mt-5">
           Where clouds dance with peaks and time stands still.
         </p>
 
@@ -58,7 +58,7 @@ export default function HomeExperience() {
           {['Misty Valleys', 'Golden Sunrise', 'Tea Gardens'].map((tag) => (
             <span
               key={tag}
-              className="bg-white/15 backdrop-blur-[8px] border border-white/30 text-white font-label text-[11px] uppercase tracking-wider px-4 py-2 rounded-full"
+              className="bg-[var(--lords-stone)]/40 border border-[var(--lords-gold)]/10 text-[var(--lords-cream)] font-label text-[11px] uppercase tracking-wider px-4 py-2 rounded-full"
             >
               {tag}
             </span>
@@ -76,17 +76,17 @@ export default function HomeExperience() {
           <div className="flex flex-col gap-4">
             <div className="flex justify-between items-center border-b border-[var(--lords-stone)]/50 pb-3">
               <span className="font-body text-xs text-[var(--lords-smoke)]">Altitude</span>
-              <span className="font-display text-lg text-white font-light">1,430m</span>
+              <span className="font-display text-lg text-[var(--lords-cream)] font-light">1,430m</span>
             </div>
 
             <div className="flex justify-between items-center border-b border-[var(--lords-stone)]/50 pb-3">
               <span className="font-body text-xs text-[var(--lords-smoke)]">Avg Temp</span>
-              <span className="font-display text-lg text-white font-light">18°C – 22°C</span>
+              <span className="font-display text-lg text-[var(--lords-cream)] font-light">18°C – 22°C</span>
             </div>
 
             <div className="flex justify-between items-center border-b border-[var(--lords-stone)]/50 pb-3">
               <span className="font-body text-xs text-[var(--lords-smoke)]">Microclimate</span>
-              <span className="font-display text-lg text-white font-light">Misty Highland</span>
+              <span className="font-display text-lg text-[var(--lords-cream)] font-light">Misty Highland</span>
             </div>
 
             <div className="flex justify-between items-center">

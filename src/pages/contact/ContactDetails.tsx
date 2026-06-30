@@ -40,7 +40,7 @@ export default function ContactDetails() {
     >
       <div className="max-w-[1440px] mx-auto w-full">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          
+
           {/* Card 1: Location */}
           <div className="detail-card-animate w-full flex flex-col bg-[var(--lords-stone)]/30 border-t-2 border-t-[var(--lords-gold)] border-x border-b border-[var(--lords-stone)]/60 p-8 rounded-b-xl shadow-lg hover:border-[var(--lords-gold)]/30 transition-all duration-500 group hover:-translate-y-1">
             <div className="p-3.5 bg-[var(--lords-moss)]/30 border border-[var(--lords-gold)]/10 text-[var(--lords-gold)] rounded-lg w-fit mb-6 transition-colors duration-300 group-hover:bg-[var(--lords-moss)]/50">

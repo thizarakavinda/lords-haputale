@@ -14,29 +14,29 @@ export default function ContactMapForm() {
 
   // Form Submit Handler
   const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-  if (!name || !email || !message) return;
+    e.preventDefault();
+    if (!name || !email || !message) return;
 
-  setIsSubmitting(true);
-  try {
-    await submitContactInquiry({
-      name,
-      email,
-      phone,
-      message,
-      subject: "Contact Form Inquiry",
-    });
-    setIsSubmitted(true);
-    setName('');
-    setEmail('');
-    setPhone('');
-    setMessage('');
-  } catch (error) {
-    console.error("Failed to submit inquiry:", error);
-  } finally {
-    setIsSubmitting(false);
-  }
-};
+    setIsSubmitting(true);
+    try {
+      await submitContactInquiry({
+        name,
+        email,
+        phone,
+        message,
+        subject: "Contact Form Inquiry",
+      });
+      setIsSubmitted(true);
+      setName('');
+      setEmail('');
+      setPhone('');
+      setMessage('');
+    } catch (error) {
+      console.error("Failed to submit inquiry:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section className="relative w-full lg:h-[700px] flex flex-col lg:block bg-[var(--lords-mist)]">
@@ -63,7 +63,15 @@ export default function ContactMapForm() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 1, ease: 'easeOut' }}
-          className="pointer-events-auto w-full max-w-[440px] bg-[rgba(9,18,13,0.92)] backdrop-blur-[20px] border border-[rgba(197,168,128,0.18)] shadow-[0_24px_64px_rgba(0,0,0,0.65)] rounded-lg p-8 md:p-10 relative overflow-hidden"
+          className="pointer-events-auto w-full max-w-[440px] p-8 md:p-10 relative overflow-hidden"
+          style={{
+            background: 'rgba(240, 244, 239, 0.35)',
+            backdropFilter: 'blur(14px)',
+            WebkitBackdropFilter: 'blur(14px)',
+            border: '1px solid rgba(168, 197, 160, 0.45)',
+            borderRadius: '16px',
+            boxShadow: '0 4px 24px rgba(74, 103, 65, 0.12)',
+          }}
         >
           <AnimatePresence mode="wait">
             {!isSubmitted ? (

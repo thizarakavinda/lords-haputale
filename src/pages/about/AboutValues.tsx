@@ -9,17 +9,17 @@ const cardVariants = {
 // AboutValues renders the diagonal grid displaying the brand values
 export default function AboutValues() {
   return (
-    <section 
+    <section
       className="relative py-36 px-6 md:px-20 z-10"
       style={{
         clipPath: 'polygon(0 4%, 100% 0%, 100% 96%, 0% 100%)',
-        background: 'linear-gradient(to bottom, rgba(5, 10, 7, 0.75) 0%, rgba(17, 32, 23, 0.75) 100%)',
+        background: 'linear-gradient(to bottom, rgba(240, 244, 239, 0.65) 0%, rgba(220, 232, 218, 0.65) 100%)',
         backdropFilter: 'blur(12px)',
         WebkitBackdropFilter: 'blur(12px)',
       }}
     >
       <div className="max-w-[1440px] mx-auto w-full relative z-10">
-        
+
         {/* Header */}
         <div className="text-center mb-20">
           <span className="font-label text-[11px] uppercase tracking-[0.45em] text-[var(--lords-gold)] block mb-3">
@@ -31,7 +31,7 @@ export default function AboutValues() {
         </div>
 
         {/* Cards Grid */}
-        <motion.div 
+        <motion.div
           variants={{
             hidden: {},
             visible: {
@@ -46,7 +46,7 @@ export default function AboutValues() {
           className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1200px] mx-auto"
         >
           {/* Card 1 - Pricing */}
-          <motion.div 
+          <motion.div
             variants={cardVariants}
             className="glass-panel p-10 rounded-2xl flex flex-col relative overflow-hidden group hover:border-[var(--lords-gold)]/30 transition-all duration-300"
           >
@@ -65,7 +65,7 @@ export default function AboutValues() {
           </motion.div>
 
           {/* Card 2 - Services */}
-          <motion.div 
+          <motion.div
             variants={cardVariants}
             className="glass-panel p-10 rounded-2xl flex flex-col relative overflow-hidden group hover:border-[var(--lords-gold)]/30 transition-all duration-300"
           >
@@ -84,7 +84,7 @@ export default function AboutValues() {
           </motion.div>
 
           {/* Card 3 - Comfort */}
-          <motion.div 
+          <motion.div
             variants={cardVariants}
             className="glass-panel p-10 rounded-2xl flex flex-col relative overflow-hidden group hover:border-[var(--lords-gold)]/30 transition-all duration-300"
           >

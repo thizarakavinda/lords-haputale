@@ -58,8 +58,8 @@ function AttractionCard({ item, isActive }: { item: AttractionItem; isActive: bo
   return (
     <div
       className={`w-full h-full rounded-2xl overflow-hidden border transition-all duration-750 ease-out relative flex flex-col justify-end p-6 select-none ${isActive
-        ? 'border-[var(--lords-gold)]/40 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.65)]'
-        : 'border-[var(--lords-stone)]/55 shadow-[0_12px_24px_rgba(0,0,0,0.4)]'
+        ? 'border-[var(--lords-gold)]/40 shadow-[0_12px_32px_rgba(74,103,65,0.2)]'
+        : 'border-[var(--lords-stone)]/55 shadow-[0_8px_16px_rgba(74,103,65,0.08)]'
         }`}
     >
       {/* Background Image */}
@@ -81,12 +81,12 @@ function AttractionCard({ item, isActive }: { item: AttractionItem; isActive: bo
         </span>
 
         {/* Title */}
-        <h3 className="font-serif text-[17px] md:text-[20px] text-[var(--lords-cream)] font-light leading-snug tracking-wide mb-3">
+        <h3 className="font-serif text-[17px] md:text-[20px] text-white font-light leading-snug tracking-wide mb-3">
           {item.title}
         </h3>
 
         {/* Location Pin & Name */}
-        <div className="flex items-center gap-1.5 text-[var(--lords-smoke)]">
+        <div className="flex items-center gap-1.5 text-white/85">
           <MapPin size={13} className="text-[var(--lords-gold)] shrink-0" />
           <span className="font-body text-xs font-light tracking-wide truncate">
             {item.location}
@@ -134,10 +134,7 @@ export default function ContactHero() {
   return (
     <section
       ref={heroRef}
-      className="relative lg:h-[70vh] min-h-[600px] flex items-center pt-32 pb-16 px-6 md:px-16 lg:px-24 border-b border-[var(--lords-stone)]/30 overflow-hidden"
-      style={{
-        background: 'radial-gradient(circle at center, #0e1e14 0%, #050a07 100%)'
-      }}
+      className="relative lg:h-[70vh] min-h-[600px] flex items-center pt-32 pb-16 px-6 md:px-16 lg:px-24 border-b border-[var(--lords-stone)]/30 overflow-hidden bg-transparent"
     >
       {/* Background Watermark */}
       <div className="absolute right-0 bottom-4 pointer-events-none select-none overflow-hidden opacity-[0.02] translate-y-6">
